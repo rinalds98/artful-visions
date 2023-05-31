@@ -1,0 +1,119 @@
+[
+    {
+        "pk": 1,
+        "model": "products.product",
+        "fields": {
+            "sku": "img0001",
+            "name": "Abandoned Water Elevator",
+            "description": "Imagine standing on the precipice of a towering cliff, where time and nature have reclaimed a once-thriving engineering marvel. The abandoned water elevator, now a haunting relic, stands as a testament to human ingenuity amidst the forces of nature. Its rusted metal frame and weathered wooden planks echo with whispers of past grandeur. Once a lifeline to transport goods and people up and down the steep terrain, it now stands motionless, suspended in silence. The breathtaking views from this cliffside vantage point provide a glimpse into a forgotten era, inviting you to ponder the stories and mysteries of this forsaken marvel.",
+            "price": 53.99,
+            "category": 2,
+            "image_url": "media/abandoned.jpg",
+            "image": "abandoned.jpg"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "products.product",
+        "fields": {
+            "sku": "img0002",
+            "name": "Sunset Beach",
+            "description": "Welcome to a tranquil beach oasis, where gentle waves softly caress the shore under a mesmerizing sunset. Step onto the warm sand, feeling it embrace your feet as you breathe in the salty ocean air. The rhythmic dance of the small waves creates a soothing symphony. As the sun begins its descent, casting vibrant hues across the sky, the beach is bathed in a warm, crimson glow. Experience the magic of small waves and a captivating red sunset, where nature's artistry unfolds before your eyes.",
+            "price": 58.99,
+            "category": 1,
+            "image_url": "media/beach.jpg",
+            "image": "beach.jpg"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "products.product",
+        "fields": {
+            "sku": "img0003",
+            "name": "Rocky Coast",
+            "description": "Transport yourself to a world of untamed beauty with a photograph capturing a rugged rocky coast. Marvel at the resilient cliffs, crashing waves, and interplay of light and shadow. Immerse yourself in the untamed majesty of nature and contemplate the power of the ocean. Let this photograph ignite your imagination and take you on a journey to the captivating rocky coast.",
+            "price": 59.99,
+            "category": 1,
+            "image_url": "media/clogerhead.jpg",
+            "image": "clogerhead.jpg"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "products.product",
+        "fields": {
+            "sku": "img0004",
+            "name": "Hidden Island",
+            "description": "Uncover the allure of a hidden island paradise, where a small harbor and lush forest create a tranquil escape. Explore the enchanting woods, where sunlight filters through towering trees. Discover a secluded harbor, a peaceful sanctuary reflecting the island's natural beauty. Immerse yourself in this idyllic setting and experience the harmonious embrace of nature's treasures. Let this photograph transport you to a hidden island of serenity and wonder.",
+            "price": 59.99,
+            "category": 1,
+            "image_url": "media/longford.jpg",
+            "image": "longford.jpg"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "products.product",
+        "fields": {
+            "sku": "img0005",
+            "name": "Sugarloaf Mountain",
+            "description": "Experience the awe-inspiring beauty of Sugarloaf, a majestic mountain that commands attention with its rugged slopes and breathtaking views. Immerse yourself in its tranquil atmosphere, where lush greenery and vibrant wildflowers adorn its slopes. Let this photograph transport you to a world of mountain splendor and adventure.",
+            "price": 59.99,
+            "category": 1,
+            "image_url": "media/sugarloaf.jpg",
+            "image": "sugarloaf.jpg"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "products.product",
+        "fields": {
+            "sku": "img0006",
+            "name": "El Teide Volcano",
+            "description": "Experience the awe-inspiring beauty of El Teide, a majestic volcano in Tenerife. Marvel at its perfect cone shape and rugged exterior, surrounded by a lunar-like landscape. Let this photograph transport you to a world of breathtaking natural wonders and ignite your sense of adventure.",
+            "price": 60.99,
+            "category": 1,
+            "image_url": "media/elteide.jpg",
+            "image": "elteide.jpg"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "products.product",
+        "fields": {
+            "sku": "darktones",
+            "name": "Dark Tones Preset",
+            "description": "Premium Dark Tones Lightroom presets for mobile & desktop to create unforgettable & unique photos. You will receive 2 presets which can change the atmosphere of your photos within a few clicks. Hope you enjoy these presets.",
+            "price": 29.99,
+            "category": 5,
+            "image_url": "media/darktones.jpg",
+            "image": "darktones.jpg"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "products.product",
+        "fields": {
+            "sku": "wintervibes",
+            "name": "Winter Vibes Preset",
+            "description": "5 Winter Vibe Lightroom presets for mobile & desktop to create unforgettable & unique winter photos. You will receive 5 presets which can change the atmosphere of your photos within a few clicks. Hope you enjoy these presets.",
+            "price": 29.99,
+            "category": 5,
+            "image_url": "media/wintervibes.jpg",
+            "image": "wintervibes.jpg"
+        }
+    },
+    {
+        "pk": 9,
+        "model": "products.product",
+        "fields": {
+            "sku": "brightandblue",
+            "name": "Bright & Blue Preset",
+            "description": "3 Bright & Blue Lightroom presets for mobile & desktop to create unforgettable & unique photos. You will receive 3 presets which can change the atmosphere of your photos within a few clicks. Hope you enjoy these presets.",
+            "price": 29.99,
+            "category": 5,
+            "image_url": "media/brightandblue.jpg",
+            "image": "brightandblue.jpg"
+        }
+    }
+]
