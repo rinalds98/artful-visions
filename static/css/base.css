@@ -3,13 +3,28 @@ html {
 }
 
 body {
-    background: url('#') no-repeat center center fixed;
-    background-size: cover;
     height: calc(100vh - 164px);
     color: #555;
     font-family: 'Lato';
 }
+.image-holder {
+    background: url('/media/homepage.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: calc(100vh - 164px);
+    color: #555;
+}
 
+.product-info {
+    font-size: 20px;
+    color: #000;
+}
+
+.info-icon {
+    color: #d97a0d;
+    padding-right: 20px;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
 /* from Bulma */
 .icon {
     align-items: center;
@@ -30,6 +45,12 @@ body {
 .shop-now-button {
     background: black;
     color: white;
+    min-width: 260px;
+}
+
+.shop-now-button-inverted {
+    background: white;
+    color: black;
     min-width: 260px;
 }
 
