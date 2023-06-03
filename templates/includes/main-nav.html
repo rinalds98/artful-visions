@@ -5,9 +5,8 @@
                 All Products
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="#" class="dropdown-item">By Price</a>
-                <a href="#" class="dropdown-item ">By Rating</a>
-                <a href="#" class="dropdown-item ">By Category</a>
+                <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
+                <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item ">By Category</a>
                 <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
             </div>
         </li>
@@ -29,15 +28,6 @@
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="presets-link">
                 <a href="{% url 'products' %}?category=digital_presets" class="dropdown-item">Digital Presets</a>
-            </div>
-        </li>
-
-        <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black" href="#" id="specials-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Specials
-            </a>
-            <div class="dropdown-menu border-0" aria-labelledby="specials-link">
-                <a href="#" class="dropdown-item">Deals</a>
             </div>
         </li>
     </ul>
