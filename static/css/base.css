@@ -10,7 +10,7 @@ body {
 .image-holder {
     background: url('/media/homepage.jpg') no-repeat center center fixed;
     background-size: cover;
-    height: 100vh
+    height: 100vh;
     color: #555;
 }
 
