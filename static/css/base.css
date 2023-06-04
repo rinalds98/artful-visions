@@ -130,10 +130,12 @@ input[name='q']::placeholder {
 /* ------------------------------- Mailchimp CSS */
 #mc_embed_signup {
     background: #fff;
-    clear: left;
-    font: 14px Helvetica, Arial, sans-serif;
-    width: 600px;
-}   
+    width: 100%;
+}
+
+#mc_embed_signup form {
+    margin: 0;
+}
 
 /* ------------------------------- bootstrap toasts */
 
@@ -201,6 +203,17 @@ input[name='q']::placeholder {
     height: 100px;
     overflow-x: hidden;
     overflow-y: auto;
+}
+
+/* --------------------------------- Bootstrap override */
+.input-group {
+    width: 300px;
+}
+
+/* --------------------------------- Homepage product info list */
+
+.inline-items {
+    display: flex;
 }
 
 /* -------------------------------- Media Queries */
@@ -292,30 +305,4 @@ input[name='q']::placeholder {
     background-color: #dc3545;
     border-color: #dc3545;
     border-radius: 0;
-}
-
-/* fixed top navbar only on medium and up */
-@media (min-width: 992px) {
-    .fixed-top-desktop-only {
-        position: fixed;
-        top: 0;
-        right: 0;
-        left: 0;
-        z-index: 1030;
-    }
-
-    .header-container {
-        padding-top: 164px;
-    }
-}
-
-/* pad the top a bit when navbar is collapsed on mobile */
-@media (max-width: 991px) {
-    .header-container {
-        padding-top: 116px;
-    }
-
-    body {
-        height: calc(100vh - 116px);
-    }
 }

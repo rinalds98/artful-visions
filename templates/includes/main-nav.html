@@ -1,32 +1,17 @@
 <div class="collapse navbar-collapse" id="main-nav">
     <ul class="navbar-nav w-auto mx-auto">
+        <li class="nav-item">
+            <a class="logo-font font-weight-bold nav-link text-black" href="{% url 'home' %}">
+                Home
+            </a>
+        </li>
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                All Products
+            <a class="logo-font font-weight-bold nav-link text-black" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Shop
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
-                <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item ">By Category</a>
                 <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
-            </div>
-        </li>
-
-        <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="photo-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Photos
-            </a>
-            <div class="dropdown-menu border-0" aria-labelledby="photo-link">
-                <a href="{% url 'products' %}?category=landscape_photos" class="dropdown-item">Landscape Photos</a>
-                <a href="{% url 'products' %}?category=urban_photos" class="dropdown-item">Urban Photos</a>
-                <a href="{% url 'products' %}?category=urban_photos,landscape_photos" class="dropdown-item">All Photos</a>
-            </div>
-        </li>
-
-        <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="homeware-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Presets
-            </a>
-            <div class="dropdown-menu border-0" aria-labelledby="presets-link">
+                <a href="{% url 'products' %}?category=prints" class="dropdown-item">Prints</a>
                 <a href="{% url 'products' %}?category=digital_presets" class="dropdown-item">Digital Presets</a>
             </div>
         </li>
