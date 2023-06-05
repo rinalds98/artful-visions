@@ -4,13 +4,6 @@ from products.models import Product
 
 
 def bag_contents(request):
-    product_sizes = {
-        'XS': '5 X 7',
-        'S': '8 X 10',
-        'M': '12 X 18',
-        'L': '18 X 24',
-        'XL': '24 X 36',
-    }
     bag_items = []
     total = 0
     product_count = 0
@@ -30,7 +23,6 @@ def bag_contents(request):
         else:
             product = get_object_or_404(Product, pk=item_id)
             for size, quantity in item_data['items_by_size'].items():
-                size = product_sizes.get(size)
                 total += quantity * product.price
                 product_count += quantity
                 bag_items.append({
