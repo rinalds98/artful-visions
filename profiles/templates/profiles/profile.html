@@ -73,6 +73,22 @@
                 </div>
             </div>
         </div>
+        <div class="row">
+            <div class="col-6 my-5">
+                If you would like to leave a testimonial, please fill out the form below.
+                One of our staff will review it. If it is approved, it will be displayed on our site.
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <form method="post" action="{% url 'profile' %}">
+                    {% csrf_token %}
+                    {{ testimonial_form|crispy }}
+                    <button type="submit">Submit</button>
+                  </form>
+            </div>
+        </div>
+    </div>
 {% endblock %}
 
 {% block postloadjs %}

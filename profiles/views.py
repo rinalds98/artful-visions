@@ -1,7 +1,7 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib import messages
 from .models import UserProfile
-from .forms import UserProfileForm
+from .forms import UserProfileForm, TestimonialForm
 from checkout.models import Order
 from django.contrib.auth.decorators import login_required
 
@@ -26,12 +26,26 @@ def profile(request):
         form = UserProfileForm(instance=profile)
 
     orders = profile.orders.all()
+    
+    # Get testimonials for the current user
+    if request.method == 'POST':
+        testimonial_form = TestimonialForm(request.POST)
+        if testimonial_form.is_valid():
+            testimonial = testimonial_form.save(commit=False)
+            testimonial.user = request.user
+            testimonial.save()
+            messages.success(request, 'Thank you for your feedback!')
+            return redirect('profile')
+    else:
+        testimonial_form = TestimonialForm()
 
     template = 'profiles/profile.html'
+
     context = {
         'form': form,
         'orders': orders,
-        'on_profile_page': True
+        'on_profile_page': True,
+        'testimonial_form': testimonial_form,
     }
 
     return render(request, template, context)
@@ -52,3 +66,4 @@ def order_history(request, order_number):
     }
 
     return render(request, template, context)
+

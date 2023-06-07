@@ -1,5 +1,5 @@
 from django import forms
-from .models import UserProfile
+from .models import UserProfile, Testimonial
 
 
 class UserProfileForm(forms.ModelForm):
@@ -34,3 +34,9 @@ class UserProfileForm(forms.ModelForm):
                 "class"
             ] = "border-black rounded-0 profile-form-input"
             self.fields[field].label = False
+
+
+class TestimonialForm(forms.ModelForm):
+    class Meta:
+        model = Testimonial
+        fields = ["testimonial"]
