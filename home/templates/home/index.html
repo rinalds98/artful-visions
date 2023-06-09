@@ -10,7 +10,7 @@
 {% endblock %}
 
 {% block content %}
-    <div class="container-fluid h-100 image-holder">
+    <div class="image-holder">
         <div class="row h-100">
             <div class="col-7 col-md-6 my-auto ml-5">
                 <p class="display-6 logo-font text-white">Now Available:</p>
@@ -107,13 +107,13 @@
         <h2 class="display-5 logo-font text-black text-center">
             <strong>testimonials</strong>
         </h2>
-        <p>What our customers are saying:</p>
+        <p class="text-center display-5 text-muted">What our customers are saying:</p>
         <div class="row my-5 d-flex justify-content-around">
             {% for testimonial in testimonials %}
-            <div class="col-sm-3 d-flex justify-content-center">
-              <div class="card">
+            <div class="col-md-3 col-sm-12 d-flex justify-content-center body-svg mb-5">
+              <div class="card svg-body">
                 <div class="icon">
-                    <i class="fa-solid fa-quote-left"></i>
+                    <i class="fa-solid fa-quote-left info-icon"></i>
                 </div>
                 <div class="card-body">
                   <p class="card-text">{{ testimonial.testimonial }}</p>

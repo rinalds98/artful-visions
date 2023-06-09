@@ -1,11 +1,10 @@
-html {
-    height: 100%;
-}
-
 body {
-    height: 100vh;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     color: #555;
-    font-family: 'Lato';
+    font-family: 'Lato', 'sans-serif';
+    
 }
 .image-holder {
     background: url('/media/homepage.jpg') no-repeat center center fixed;
@@ -20,7 +19,7 @@ body {
 }
 
 .info-icon {
-    color: #d97a0d;
+    color: #f98f24;
     padding-right: 20px;
     margin-bottom: 20px;
     font-size: 2rem;
@@ -141,6 +140,14 @@ input[name='q']::placeholder {
     box-shadow: 15px 15px 30px #bebebe,
                -15px -15px 30px #ffffff;
   }
+
+.svg-body {
+    background-image: url('/media/wave.svg');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    bottom: 0;
+  }
+
 /* ------------------------------- Mailchimp CSS */
 #mc_embed_signup {
     background: #fff;
@@ -347,5 +354,5 @@ input[name='q']::placeholder {
 
 /* --------------------------------- Footer */
 footer {
-    margin-top: 50vh;
+    margin-top: auto;
 }
