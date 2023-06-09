@@ -1,7 +1,9 @@
+html {
+    height: 100%;
+}
+
 body {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+    height: 100vh;
     color: #555;
     font-family: 'Lato', 'sans-serif';
     
@@ -354,5 +356,5 @@ input[name='q']::placeholder {
 
 /* --------------------------------- Footer */
 footer {
-    margin-top: auto;
+    margin-top: 50vh;
 }
