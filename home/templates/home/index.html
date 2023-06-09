@@ -25,7 +25,7 @@
     </div>
     <div class="mx-3 my-5">
         <div class="row">
-            <div class="col-12 col-lg-6 col-md-12 col-sm-12 my-auto ">
+            <div class="col-12 col-lg-6 col-md-12 col-sm-12 my-auto">
                 <h2 class="display-5 logo-font text-black text-center">
                     <strong>Summer Presets</strong>
                 </h2>
@@ -61,61 +61,67 @@
                 <img src="media/dark-tones-preset.jpg" class="img-fluid rounded" alt="Dark Tones Presets">
             </div>
         </div>
-
     </div>
     <div class="bg-black">
         <div class="row">
             <div class="col-12 col-lg-6 col-md-12 col-sm-12 my-auto">
                 <img src="media/product-show.jpg" class="img-fluid" alt="Dark Tones Presets">
             </div>
-        <div class="col-12 col-lg-6 col-md-12 col-sm-12 my-auto ">
-            <h2 class="display-5 pt-5 mx-3 logo-font text-white text-center">
-                <strong>Freshen up your Living Room</strong>
-            </h2>
-            <div class="mx-3 my-5">
-                <ul class="list-unstyled product-info text-white">
-                    <li class="inline-items">
-                        <i class="fa-solid fa-camera info-icon"></i>
-                        <p>Instantly display beautiful artwork with framed printed photos.</p>
-                    </li>
-                    <li class="inline-items">
-                        <i class="fa-solid fa-image info-icon"></i>
-                        <p>Elevate your space with a stylish and personalized touch.</p>
-                    </li>
-                    <li class="inline-items">
-                        <i class="fa-solid fa-sliders info-icon"></i>
-                        <p>Preserve memories in high-quality prints.</p>
-                    </li>
-                    <li class="inline-items">
-                        <i class="fa-solid fa-newspaper info-icon"></i>
-                        <p>Give meaningful and sentimental gifts.</p>
-                    </li>
-                    <li class="inline-items">
-                        <i class="fa-solid fa-layer-group info-icon"></i>
-                        <p>Experience craftsmanship and quality in every frame.</p>
-                    </li>
-                    <li>
-                        <div class="text-center py-4">
-                            <a href="{% url 'product_detail' product_id=6 %}" class="shop-now-button-inverted btn btn-lg text-uppercase py-3">Buy Now</a>
-                        </div>
-                    </li>
-                </ul>
+            <div class="col-12 col-lg-6 col-md-12 col-sm-12 my-auto ">
+                <h2 class="display-5 pt-5 mx-3 logo-font text-white text-center">
+                    <strong>Freshen up your Living Room</strong>
+                </h2>
+                <div class="mx-3 my-5">
+                    <ul class="list-unstyled product-info text-white">
+                        <li class="inline-items">
+                            <i class="fa-solid fa-camera info-icon"></i>
+                            <p>Instantly display beautiful artwork with framed printed photos.</p>
+                        </li>
+                        <li class="inline-items">
+                            <i class="fa-solid fa-image info-icon"></i>
+                            <p>Elevate your space with a stylish and personalized touch.</p>
+                        </li>
+                        <li class="inline-items">
+                            <i class="fa-solid fa-sliders info-icon"></i>
+                            <p>Preserve memories in high-quality prints.</p>
+                        </li>
+                        <li class="inline-items">
+                            <i class="fa-solid fa-newspaper info-icon"></i>
+                            <p>Give meaningful and sentimental gifts.</p>
+                        </li>
+                        <li class="inline-items">
+                            <i class="fa-solid fa-layer-group info-icon"></i>
+                            <p>Experience craftsmanship and quality in every frame.</p>
+                        </li>
+                        <li>
+                            <div class="text-center py-4">
+                                <a href="{% url 'product_detail' product_id=6 %}" class="shop-now-button-inverted btn btn-lg text-uppercase py-3">Buy Now</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
-    </div>
-    <div class="container-fluid h-100">
-        <div class="row h-100">
-            <div class="col-7 col-md-6 my-auto">
-                <h1 class="display-4 logo-font text-black">
-                    testimonials (coming soon)
-                </h1>
-                <div class="my-5">
-                    <h4>
-                        <a href="#" class="shop-now-button btn btn-lg text-uppercase py-3">Shop Now</a>
-                    </h4>
+    <div class="mx-3 my-5">
+        <h2 class="display-5 logo-font text-black text-center">
+            <strong>testimonials</strong>
+        </h2>
+        <p>What our customers are saying:</p>
+        <div class="row my-5 d-flex justify-content-around">
+            {% for testimonial in testimonials %}
+            <div class="col-sm-3 d-flex justify-content-center">
+              <div class="card">
+                <div class="icon">
+                    <i class="fa-solid fa-quote-left"></i>
                 </div>
+                <div class="card-body">
+                  <p class="card-text">{{ testimonial.testimonial }}</p>
+                  <h5 class="card-title text-center">{{ testimonial.user }}</h5>
+                </div>
+              </div>
             </div>
+            {% endfor %}
         </div>
     </div>
 {% endblock %}

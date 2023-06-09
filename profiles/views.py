@@ -26,7 +26,7 @@ def profile(request):
         form = UserProfileForm(instance=profile)
 
     orders = profile.orders.all()
-    
+
     # Get testimonials for the current user
     if request.method == 'POST':
         testimonial_form = TestimonialForm(request.POST)
