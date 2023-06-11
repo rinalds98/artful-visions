@@ -353,6 +353,21 @@ input[name='q']::placeholder {
     border-radius: 0;
 }
 
+/* --------------------------------- About Me Page */
+
+.image-holder-about {
+    background: url('/media/aboutme.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    color: #555;
+}
+
+@media (min-width: 900px) {
+    .about-me {
+        width: 50%;
+        margin: 0 auto;
+    }
+}
 
 /* --------------------------------- Footer */
 footer {

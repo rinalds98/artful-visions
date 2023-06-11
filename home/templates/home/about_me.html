@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="image-holder-about">
+        <div class="row h-100">
+            <div class="col-12 col-md-12 my-auto">
+                <h1 class="display-5 logo-font text-white text-center"><strong>About Me</strong></h1>
+            </div>
+        </div>
+    </div>
+    <div class="mx-3 my-5">
+        <div class="row">
+            <div class="col my-auto">
+                <h2 class="display-5 logo-font text-black text-center">
+                    <strong>My Name Is Artful Visions</strong>
+                </h2>
+                <div class="text-center about-me">
+                    <p>
+                        Photographer, videographer and creative story teller based in Dublin, Ireland.
+                        My goal is to create captivating visual content that connects with people on a deeper level and leaves a lasting impression.
+                        With years of experience in the field, 
+                    <p>    
+                        I have honed my skills in various genres, including portrait photography,
+                        landscape photography, and cinematic videography. I approach each project with creativity,
+                        attention to detail, and a keen eye for composition, ensuring that every frame tells a compelling story.
+                    </p>
+                    <p>
+                        Thank you for visiting my website. I invite you to explore my portfolio and get in touch for any 
+                        photography or videography needs. 
+                    </p>
+                    <p>
+                        <strong>Let's create something extraordinary together!</strong>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bg-black">
+        <div class="row">
+            <div class="col-12 col-lg-6 col-md-12 col-sm-12 my-auto">
+                <img src="media/contactme.jpg" class="img-fluid" alt="A man standing looking over a valley">
+            </div>
+            <div class="col-12 col-lg-6 col-md-12 col-sm-12 my-auto ">
+                <h2 class="display-5 pt-5 mx-3 logo-font text-white text-center">
+                    <strong>Drop a message!</strong>
+                </h2>
+                <div class="mr-5 my-5">
+                    <form method="post">
+                        {% csrf_token %}
+                        {{ form|crispy }}
+                        <button type="submit">Submit</button>
+                      </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
