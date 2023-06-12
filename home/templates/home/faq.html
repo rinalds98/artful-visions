@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+{% endblock %}
+
+{% block content %}
+    <div class="image-holder-about">
+        <div class="row h-100">
+            <div class="col-12 col-md-12 my-auto">
+                <h1 class="display-5 logo-font text-white text-center"><strong>FAQ</strong></h1>
+            </div>
+        </div>
+    </div>
+    <div class="mx-3 my-5">
+        <div class="row">
+            <div class="col my-auto">
+                <h2 class="display-5 logo-font text-black text-center">
+                    <strong>Frequently asked questions:</strong>
+                </h2>
+                <div class="text-center">
+                    {% for faq in faqs %}
+                        <h3>{{ faq.question }}</h3>
+                        <p>{{ faq.answer }}</p>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bg-black container-fluid px-0">
+        <div class="image-wrapper">
+            <div class="row h-100 col-lg-6 col-md-12 pl-5 form-wrapper">
+                <div class="col my-auto">
+                    <h2 class="display-5 logo-font text-black text-center">
+                        <strong>Still have questions?</strong>
+                    </h2>
+                    <div class="text-center">
+                        <h3>Send us a message!</h3>
+                        <p>Fill out the form below and we will get back to you as soon as possible.</p>
+                    </div>
+                    <div>
+                        <form method="post">
+                        {% csrf_token %}
+                        {{ faq_form|crispy }}
+                        <button class="btn btn-black rounded-0 text-uppercase float-right" type="submit">Submit</button>
+                    </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="">
+        <div class="row">
+
+        </div>
+    </div>
+{% endblock %}

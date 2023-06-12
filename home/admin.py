@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Contact
+from .models import Contact, Faq
 
 
 class ContactAdmin(admin.ModelAdmin):
@@ -12,3 +12,14 @@ class ContactAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Contact, ContactAdmin)
+
+
+class FaqAdmin(admin.ModelAdmin):
+    list_display = (
+        'question',
+        'answer',
+        'is_active',
+    )
+
+
+admin.site.register(Faq, FaqAdmin)

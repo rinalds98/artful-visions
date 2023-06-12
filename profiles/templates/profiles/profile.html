@@ -84,7 +84,7 @@
                 <form method="post" action="{% url 'profile' %}">
                     {% csrf_token %}
                     {{ testimonial_form|crispy }}
-                    <button type="submit">Submit</button>
+                    <button class="btn btn-black rounded-0 text-uppercase float-right" type="submit">Submit</button>
                   </form>
             </div>
         </div>

@@ -369,6 +369,19 @@ input[name='q']::placeholder {
     }
 }
 
+
+/* --------------------------------- FAQ Page */
+.image-wrapper{
+    background: url('/media/faq.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    color: #555;
+}
+
+.form-wrapper {
+    padding: 20px;
+    background: #fff;
+}
 /* --------------------------------- Footer */
 footer {
     margin-top: 50vh;
