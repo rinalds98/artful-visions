@@ -97,6 +97,57 @@
                 </div>
             </div>
         </div>
+        <div class="row">
+            <div class="col-12">
+                <h2>Reviews</h2>
+            </div>
+            {% if reviews %}
+                {% for review in reviews %}
+                <div class="col-lg-4 col-12 text-center">
+                    <div class="review-container">
+                        <p class="star">
+                            {% if review.rating == 1 %}
+                            <i class="fa fa-star"></i>
+                            {% elif review.rating == 2 %}
+                            <i class="fa fa-star"></i><i class="fa fa-star"></i>
+                            {% elif review.rating == 3 %}
+                            <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                            {% elif review.rating == 4 %}
+                            <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                            {% elif review.rating == 5 %}
+                            <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                              class="fa fa-star"></i>
+                            {% endif %}
+                        <p>Comment: {{ review.comment }}</p>
+                        <p>By: {{ review.user.username }}</p>
+                    </div>
+                </div>
+                {% endfor %}
+            {% else %}
+                <p>No reviews yet.</p>
+            {% endif %}
+        </div>
+        <div class="row">
+            {% if user.is_authenticated %}
+                <div class="col-6">
+                    <h2>Add a Review</h2>
+                    <form method="post" action="{% url 'product_detail' product_id=product.id %}">
+                        {% csrf_token %}
+                        <div class="rate">
+                            {% for radio in review_form.rating %}
+                            {{ radio }}
+                            {% endfor %}
+                          </div>
+                        {{ review_form.comment|as_crispy_field }}
+                        <button type="submit" class="btn btn-black">Submit Review</button>
+                    </form>
+                </div>
+            {% else %}
+                <div class="col-6">
+                    <p>Please <a href="{% url 'account_login' %}">log in</a> to add a review.</p>
+                </div>
+            {% endif %}
+        </div>
     </div>
 {% endblock %}
 {% block postloadjs %}

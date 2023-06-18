@@ -29,7 +29,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['artfulvisions.herokuapp.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['artfulvisions.herokuapp.com', 'localhost', '127.0.0.1', 'd29f-212-129-80-255.ngrok-free.app']
 
 
 # Application definition

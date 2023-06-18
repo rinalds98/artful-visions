@@ -1,5 +1,5 @@
 from django import forms
-from .models import Product, Category
+from .models import Product, Category, Review
 
 
 class ProductForm(forms.ModelForm):
@@ -16,3 +16,33 @@ class ProductForm(forms.ModelForm):
         self.fields['category'].choices = friendly_names
         for field_name, field in self.fields.items():
             field.widget.attrs['class'] = 'border-black rounded-0'
+
+
+STAR_CHOICES = (
+    (5, ""),
+    (4, ""),
+    (3, ""),
+    (2, ""),
+    (1, ""),
+)
+
+
+class ReviewForm(forms.ModelForm):
+    """
+    This Class is responsible for creating the form on the review section
+    of the homepage.
+    """
+
+    rating = forms.ChoiceField(
+        choices=STAR_CHOICES,
+        widget=forms.RadioSelect(
+            attrs={
+                "class": "icon",
+                "aria-label": "star-rating",
+            }
+        ),
+    )
+
+    class Meta:
+        model = Review
+        fields = ["rating", "comment"]

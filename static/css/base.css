@@ -352,6 +352,52 @@ input[name='q']::placeholder {
     border-color: #dc3545;
     border-radius: 0;
 }
+/* --------------------------------- Review container */
+
+.review-container {
+    border: 1px solid #000;
+    border-radius: 10px;
+}
+
+/* Star review selection --product_deatil.html */
+
+.star {
+    color: #f2b600
+}
+
+.rate input[type=radio] {
+    opacity: 0;
+}
+
+.rate {
+    display: flex;
+    padding: 20px;
+    flex-direction: row-reverse;
+    justify-content: center;
+}
+
+.rate > label:before {
+    font-family: FontAwesome;
+    content: "\f005";
+    font-size: 35px;
+    padding: 0;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+.rate label:hover,
+.rate label:hover ~ label {
+    color: #f2b600;
+}
+
+label:focus-within {
+    color: #f2b600;
+}
+
+label:focus-within ~ label:before {
+    color: #f2b600;
+}
+
 
 /* --------------------------------- About Me Page */
 
