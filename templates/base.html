@@ -157,7 +157,7 @@
     {% endblock %}
 
     {% block postloadjs %}
-    <script type="text/javascript">
+    <script>
         $('.toast').toast('show');
     </script>
     {% endblock %}
@@ -210,17 +210,22 @@
                                         <div class="clear foot">
                                             <input type="submit" value="Subscribe" name="subscribe"
                                                 id="mc-embedded-subscribe" class="button">
-                                            <p class="brandingLogo"><a href="http://eepurl.com/iso1_g"
-                                                    title="Mailchimp - email marketing made easy and fun"><img
-                                                        src="https://eep.io/mc-cdn-images/template_images/branding_logo_text_dark_dtp.svg"></a>
+                                            <p class="brandingLogo">
+                                                <a href="http://eepurl.com/iso1_g"
+                                                    title="Mailchimp - email marketing made easy and fun">
+                                                    <img
+                                                        src="https://eep.io/mc-cdn-images/template_images/branding_logo_text_dark_dtp.svg"
+                                                        alt="Mailchimp branding image"
+                                                    >
+                                                </a>
                                             </p>
                                         </div>
                                     </div>
                                 </div>
                             </form>
                         </div>
-                        <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
-                        <script type='text/javascript'>
+                        <script src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+                        <script>
                             (function($) {window.fnames = new Array();
                             window.ftypes = new Array();
                             fnames[0]='EMAIL';ftypes[0]='email';
