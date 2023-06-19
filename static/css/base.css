@@ -2,6 +2,16 @@ html {
     height: 100%;
 }
 
+/*---------------Header*/
+
+@media screen and (min-width: 960px) {
+    .desktop-menu {
+        display: none !important;
+    }
+}
+
+
+
 body {
     height: 100vh;
     color: #555;
