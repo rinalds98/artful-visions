@@ -98,12 +98,12 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-12">
+            <div class="col-12 text-center">
                 <h2>Reviews</h2>
             </div>
             {% if reviews %}
                 {% for review in reviews %}
-                <div class="col-lg-4 col-12 text-center">
+                <div class="col-12 col-md-4 mx-auto my-3 text-center">
                     <div class="review-container">
                         <p class="star">
                             {% if review.rating == 1 %}
@@ -124,12 +124,16 @@
                 </div>
                 {% endfor %}
             {% else %}
-                <p>No reviews yet.</p>
+            <div class="col-12 text-center">
+                <p>
+                    No reviews yet.
+                </p>
+            </div>
             {% endif %}
         </div>
         <div class="row">
             {% if user.is_authenticated %}
-                <div class="col-6">
+                <div class="col-12 col-md-6 mx-auto text-center">
                     <h2>Add a Review</h2>
                     <form method="post" action="{% url 'product_detail' product_id=product.id %}">
                         {% csrf_token %}
