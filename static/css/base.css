@@ -1,28 +1,21 @@
-html {
-    height: 100%;
-}
-
-/*---------------Header*/
-
-@media screen and (min-width: 960px) {
-    .desktop-menu {
-        display: none !important;
-    }
-}
-
-
-
 body {
-    height: 100vh;
     color: #555;
     font-family: 'Lato', 'sans-serif';
     
 }
+
+/*---------------Header*/
 .image-holder {
     background: url('/media/homepage.jpg') no-repeat center center fixed;
     background-size: cover;
     height: 100vh;
     color: #555;
+}
+
+@media screen and (min-width: 960px) {
+    .desktop-menu {
+        display: none w!important;
+    }
 }
 
 .product-info {
@@ -439,6 +432,6 @@ label:focus-within ~ label:before {
     background: #fff;
 }
 /* --------------------------------- Footer */
-footer {
+footer{
     margin-top: 50vh;
 }
