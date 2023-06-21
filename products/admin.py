@@ -1,5 +1,9 @@
 from django.contrib import admin
-from .models import Category, Product, Review
+from .models import Category, Product, Review, ProductSize
+
+
+class ProductSizeInline(admin.TabularInline):
+    model = ProductSize
 
 
 class ProductAdmin(admin.ModelAdmin):
@@ -12,6 +16,7 @@ class ProductAdmin(admin.ModelAdmin):
     )
 
     ordering = ("sku",)
+    inlines = [ProductSizeInline]
 
 
 class CategoryAdmin(admin.ModelAdmin):

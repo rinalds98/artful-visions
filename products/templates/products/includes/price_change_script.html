@@ -1,0 +1,39 @@
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+    
+      var sizeSelect = document.getElementById("id_product_size");
+      var priceDisplay = document.getElementById("priceDisplay");
+    
+      var sizesJSON = '{{ sizes_json|safe }}';
+      var sizes = JSON.parse(sizesJSON);
+    
+      var selected_price = sizes[0].price;
+    
+      function updatePrice() {
+        var selectedSize = sizeSelect.value;
+    
+        var selectedProductSize = sizes.find(function(size) {
+          return size.size === selectedSize;
+        });
+    
+    
+        if (selectedProductSize) {
+          selected_size = selectedProductSize.size;
+          selected_price = Number(selectedProductSize.price);
+        } else {
+          selected_size = null;
+          selected_price = null;
+        }
+    
+        if (selected_price) {
+          priceDisplay.textContent = "$" + selected_price.toFixed(2);
+        } else {
+          priceDisplay.textContent = "";
+        }
+      }
+    
+      sizeSelect.addEventListener("change", updatePrice);
+    
+      updatePrice();
+    });
+    </script>

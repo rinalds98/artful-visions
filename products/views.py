@@ -2,9 +2,11 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
 from django.db.models.functions import Lower
-from .models import Product, Category, Review
+from .models import Product, Category, Review, ProductSize
 from .forms import ProductForm, ReviewForm
 from django.contrib.auth.decorators import login_required
+import json
+from decimal import Decimal
 
 
 def all_products(request):
@@ -63,11 +65,31 @@ def all_products(request):
     return render(request, "products/products.html", context)
 
 
+class DecimalEncoder(json.JSONEncoder):
+    def default(self, obj):
+        if isinstance(obj, Decimal):
+            return str(obj)
+        return super().default(obj)
+
+
 def product_detail(request, product_id):
     """A view to show individual product details"""
 
     product = get_object_or_404(Product, pk=product_id)
     reviews = Review.objects.filter(product=product)
+    product_sizes = product.sizes.all()
+
+    """
+    code taken and adapted from
+    https://bobbyhadz.com/blog/python-typeerror-object-of-type-decimal-is-not-json-serializable
+    """
+    sizes = []
+    for product_size in product_sizes:
+        sizes.append({"size": product_size.size, "price": product_size.price})
+
+    sizes_json = json.dumps(sizes, cls=DecimalEncoder)
+
+    # code taken and adapted from ^^^
 
     review_form = ReviewForm()
 
@@ -90,10 +112,20 @@ def product_detail(request, product_id):
                 "Sorry, only registered users can do that.",
             )
 
+    if request.method == "GET" and "product_size" in request.GET:
+        selected_size = request.GET.get("product_size")
+        product_size = product.sizes.filter(size=selected_size).first()
+
+        if product_size:
+            product_size.price = selected_size
+            product_size.save()
+
     context = {
         "product": product,
         "reviews": reviews,
         "review_form": review_form,
+        "sizes": sizes,
+        "sizes_json": sizes_json,
     }
 
     return render(request, "products/product_detail.html", context)
