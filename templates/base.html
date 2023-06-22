@@ -52,7 +52,7 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="col-12 col-lg-4 my-auto d-none d-lg-block py-1 py-lg-0 text-center text-lg-left">
                 <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                    <h2 class="logo-font text-black my-0"><strong>Artful</strong> Visions</h2>
+                    <h2 class="logo-font text-black my-0"><strong class="accent-color">Art</strong><strong>ful</strong> Visions</h2>
                 </a>
             </div>
             <div class="d-none d-lg-block">
@@ -137,7 +137,7 @@
                         </div>
                     </li>
                     <li class="list-inline-item">
-                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
+                        <a class="{% if grand_total %}accent-color font-weight-bold{% else %}text-black{% endif %} nav-link"
                             href="{% url 'view_bag' %}">
                             <div class="text-center">
                                 <div><i class="fas fa-shopping-bag fa-lg"></i></div>
