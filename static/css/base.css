@@ -6,7 +6,7 @@ body {
 
 /*---------------Header*/
 .image-holder {
-    background: url('/media/homepage.jpg') no-repeat center center fixed;
+    background: url('../../media/homepage.jpg') no-repeat center center fixed;
     background-size: cover;
     height: 100vh;
     color: #555;
@@ -152,7 +152,7 @@ input[name='q']::placeholder {
   }
 
 .svg-body {
-    background-image: url('/media/wave.svg');
+    background-image: url('../../media/wave.svg');
     background-repeat: no-repeat;
     background-position: bottom;
     bottom: 0;
@@ -410,7 +410,7 @@ label:focus-within ~ label:before {
 /* --------------------------------- About Me Page */
 
 .image-holder-about {
-    background: url('/media/aboutme.jpg') no-repeat center center fixed;
+    background: url('../../media/aboutme.jpg') no-repeat center center fixed;
     background-size: cover;
     height: 100vh;
     color: #555;
@@ -426,7 +426,7 @@ label:focus-within ~ label:before {
 
 /* --------------------------------- FAQ Page */
 .image-wrapper{
-    background: url('/media/faq.jpg') no-repeat center center fixed;
+    background: url('../../media/faq.jpg') no-repeat center center fixed;
     background-size: cover;
     height: 100vh;
     color: #555;
