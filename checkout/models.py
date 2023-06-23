@@ -153,7 +153,9 @@ class OrderLineItem(models.Model):
         checks which price is being used before updating
         """
         if self.product.has_sizes:
-            product_size = self.product.sizes.filter(size=self.product_size).first()
+            product_size = self.product.sizes.filter(
+                size=self.product_size,
+            ).first()
             if product_size:
                 self.lineitem_total = product_size.price * self.quantity
             else:
