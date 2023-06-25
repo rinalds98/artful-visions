@@ -29,7 +29,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['artful-visions-e583fd12b6db.herokuapp.com', 'localhost', '127.0.0.1', '4788-212-129-80-239.ngrok-free.app']
 
