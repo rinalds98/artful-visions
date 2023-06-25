@@ -1,6 +1,9 @@
 body {
     color: #555;
     font-family: 'Lato', 'sans-serif';
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     
 }
 
@@ -12,6 +15,11 @@ body {
     color: #555;
 }
 
+.image-fluid {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 @media screen and (min-width: 960px) {
     .desktop-menu {
         display: none w!important;
@@ -438,5 +446,5 @@ label:focus-within ~ label:before {
 }
 /* --------------------------------- Footer */
 footer{
-    margin-top: 50vh;
+    margin-top: auto;
 }

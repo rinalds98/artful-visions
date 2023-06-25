@@ -8,7 +8,7 @@
     {% block meta %}
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="{{ MEDIA_URL }}favicon.png" type="image/x-icon">
     {% endblock %}
 
@@ -100,7 +100,7 @@
                                 <p class="my-0">Search</p>
                             </div>
                         </a>
-                        <div class="dropdown-menu border-0" aria-labelledby="search option">
+                        <div class="dropdown-menu border-0 p-0" aria-labelledby="search option">
                             <form method="GET" action="{% url 'products' %}">
                                 <div class="input-group">
                                     <input class="form-control border border-black rounded-0" type="text" name="q"
@@ -202,14 +202,12 @@
             {% endfor %}
         </div>
     {% endif %}
-    {% block page_header %}
-    {% endblock %}
 
     {% block content %}
     {% endblock %}
 
 <!-- Footer -->
-<footer class="container-wrapper footer">
+<footer class="container-wrapper mt-5">
 <div class="container quotes-container content-container">
     <section class="footer">
         <div class="row">
@@ -289,14 +287,10 @@
 </footer>
 <!-- /.footer --> 
 
-
+</body>
 {% block postloadjs %}
 <script>
     $('.toast').toast('show');
 </script>
 {% endblock %}
-
-
-</body>
-
 </html>
