@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
 from django.db.models.functions import Lower
-from .models import Product, Category, Review, ProductSize
+from .models import Product, Category, Review
 from .forms import ProductForm, ReviewForm
 from django.contrib.auth.decorators import login_required
 import json
@@ -90,6 +90,13 @@ def product_detail(request, product_id):
     sizes_json = json.dumps(sizes, cls=DecimalEncoder)
 
     # code taken and adapted from ^^^
+    if request.method == "GET" and "product_size" in request.GET:
+        selected_size = request.GET.get("product_size")
+        product_size = product.sizes.filter(size=selected_size).first()
+
+        if product_size:
+            product_size.price = selected_size
+            product_size.save()
 
     review_form = ReviewForm()
 
@@ -111,14 +118,6 @@ def product_detail(request, product_id):
                 request,
                 "Sorry, only registered users can do that.",
             )
-
-    if request.method == "GET" and "product_size" in request.GET:
-        selected_size = request.GET.get("product_size")
-        product_size = product.sizes.filter(size=selected_size).first()
-
-        if product_size:
-            product_size.price = selected_size
-            product_size.save()
 
     context = {
         "product": product,
