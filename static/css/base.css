@@ -87,6 +87,19 @@ body {
     min-width: 260px;
 }
 
+.checkout-button {
+    background: black;
+    border-radius: 12px;
+    color: white;
+    width: 90%;
+}
+
+.checkout-button:hover {
+    background: white;
+    border-radius: 12px;
+    border: 1px solid black;
+    color: black;
+}
 
 .btn-black {
     background: black;
@@ -95,7 +108,7 @@ body {
 
 .btn-outline-black {
     background: white;
-    color: black !important; /* use important to override link colors for <a> elements */
+    color: black !important;
     border: 1px solid black;
 }
 
