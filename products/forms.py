@@ -1,21 +1,27 @@
 from django import forms
-from .models import Product, Category, Review
+from .models import Product, Category, Review, ProductSize
+from django.forms import inlineformset_factory
 
 
 class ProductForm(forms.ModelForm):
-
     class Meta:
         model = Product
-        fields = '__all__'
+        fields = ['category', 'sku', 'name', 'description', 'price', 'has_sizes', 'image']
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        categories = Category.objects.all()
-        friendly_names = [(c.id, c.get_friendly_name()) for c in categories]
 
-        self.fields['category'].choices = friendly_names
-        for field_name, field in self.fields.items():
-            field.widget.attrs['class'] = 'border-black rounded-0'
+class ProductSizeForm(forms.ModelForm):
+    class Meta:
+        model = ProductSize
+        fields = ['size', 'price']
+
+
+ProductSizeFormSet = inlineformset_factory(
+    Product,
+    ProductSize,
+    form=ProductSizeForm,
+    extra=1,
+    can_delete=True,
+)
 
 
 STAR_CHOICES = (

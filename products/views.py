@@ -3,7 +3,7 @@ from django.contrib import messages
 from django.db.models import Q
 from django.db.models.functions import Lower
 from .models import Product, Category, Review
-from .forms import ProductForm, ReviewForm
+from .forms import ProductForm, ReviewForm, ProductForm, ProductSizeFormSet
 from django.contrib.auth.decorators import login_required
 import json
 from decimal import Decimal
@@ -166,29 +166,29 @@ def edit_product(request, product_id):
         messages.error(request, "Sorry, only store owners can do that.")
         return redirect(reverse("home"))
 
-    product = get_object_or_404(Product, pk=product_id)
-    if request.method == "POST":
-        form = ProductForm(request.POST, request.FILES, instance=product)
-        if form.is_valid():
-            form.save()
-            messages.success(request, "Successfully updated product!")
-            return redirect(reverse("product_detail", args=[product.id]))
-        else:
-            messages.error(
-                request,
-                "Failed to update product. Please ensure the form is valid.",
-            )
-    else:
-        form = ProductForm(instance=product)
-        messages.info(request, f"You are editing {product.name}")
+    product = get_object_or_404(Product, id=product_id)
 
-    template = "products/edit_product.html"
+    if request.method == "POST":
+        product_form = ProductForm(request.POST, instance=product)
+        size_formset = ProductSizeFormSet(request.POST, prefix='size', instance=product)
+
+        if product_form.is_valid() and size_formset.is_valid():
+            product = product_form.save()
+            if product.has_sizes:
+                size_formset.save()
+
+            return redirect('product_detail', product_id=product.id)
+    else:
+        product_form = ProductForm(instance=product)
+        size_formset = ProductSizeFormSet(prefix='size', instance=product)
+
     context = {
-        "form": form,
-        "product": product,
+        'product': product,
+        'product_form': product_form,
+        'size_formset': size_formset,
     }
 
-    return render(request, template, context)
+    return render(request, 'products/edit_product.html', context)
 
 
 @login_required
