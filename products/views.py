@@ -137,26 +137,26 @@ def add_product(request):
         messages.error(request, "Sorry, only store owners can do that.")
         return redirect(reverse("home"))
 
-    if request.method == "POST":
+    if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES)
-        if form.is_valid():
+        size_formset = ProductSizeFormSet(request.POST)
+
+        if form.is_valid() and size_formset.is_valid():
             product = form.save()
-            messages.success(request, "Successfully added product!")
-            return redirect(reverse("product_detail", args=[product.id]))
-        else:
-            messages.error(
-                request,
-                "Failed to add product. Please ensure the form is valid.",
-            )
+            size_formset.instance = product
+            size_formset.save()
+
+            return redirect('product_detail', product_id=product.id)
     else:
         form = ProductForm()
+        size_formset = ProductSizeFormSet()
 
-    template = "products/add_product.html"
     context = {
-        "form": form,
+        'form': form,
+        'size_formset': size_formset,
     }
 
-    return render(request, template, context)
+    return render(request, 'products/add_product.html', context)
 
 
 @login_required

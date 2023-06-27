@@ -9,6 +9,11 @@ class ProductForm(forms.ModelForm):
         fields = ['category', 'sku', 'name', 'description', 'price', 'has_sizes', 'image']
 
 
+ProductSizeFormSet = inlineformset_factory(
+    Product, ProductSize, fields=('size', 'price'), extra=1, can_delete=False
+)
+
+
 class ProductSizeForm(forms.ModelForm):
     class Meta:
         model = ProductSize
