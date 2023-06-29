@@ -15,6 +15,7 @@ from products.models import Product
 from profiles.forms import UserProfileForm
 from profiles.models import UserProfile
 from bag.contexts import bag_contents
+from discounts.models import DiscountCode
 
 import stripe
 import json
@@ -46,7 +47,6 @@ def cache_checkout_data(request):
 def checkout(request):
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
-
     if request.method == "POST":
         bag = request.session.get("bag", {})
 
@@ -174,6 +174,20 @@ def checkout_success(request, order_number):
     save_info = request.session.get("save_info")
     order = get_object_or_404(Order, order_number=order_number)
 
+    discount_code = request.session.get('discount_code')
+    if discount_code:
+        # Retrieve the DiscountCode instance based on the discount code
+        discount = get_object_or_404(DiscountCode, code=discount_code)
+        # Assign the discount to the order
+        order.discount = discount
+        order.save()
+
+    if order.discount:
+        discount_amount = order.order_total * (order.discount.discount / 100)
+        order.grand_total = order.order_total - discount_amount
+    else:
+        order.grand_total = order.order_total
+
     if request.user.is_authenticated:
         profile = UserProfile.objects.get(user=request.user)
         # Attach the user's profile to the order
@@ -204,6 +218,8 @@ def checkout_success(request, order_number):
 
     if "bag" in request.session:
         del request.session["bag"]
+    if "discount_code" in request.session:
+        del request.session["discount_code"]
 
     template = "checkout/checkout_success.html"
     context = {

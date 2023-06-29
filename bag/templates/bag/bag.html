@@ -93,8 +93,15 @@
                             {% endfor %}
                             <tr>
                                 <td colspan="5" class="pt-5 text-right">
+                                    <p>If you have a discount code please enter it now and save money!</p>
+                                    <form id="discount-form" method="post" action="{% url 'discount_validation' %}">
+                                        {% csrf_token %}
+                                        <input type="text" name="discount_code" id="discount-code-input">
+                                        <button class="btn discount-button btn-sm my-2 ml-2" type="submit">Apply Discount</button>
+                                      </form>
+                                    <div id="discount-message" class="my-2"></div>
                                     <h6><strong>Bag Total: ${{ total|floatformat:2 }}</strong></h6>
-                                    <h6>Delivery: ${{ delivery|floatformat:2 }}</h6>
+                                    <h6>Discount: ${{ discount |floatformat:2 }}</h6>
                                     <h4 class="mt-4"><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></h4>
                                 </td>
                             </tr>
@@ -155,4 +162,32 @@
             });
     })
 </script>
+<script>
+    $(document).ready(function() {
+    $('#discount-form').on('submit', function(event) {
+      event.preventDefault();
+
+      // Get the discount code entered by the user
+      var discountCode = $('#discount-code-input').val();
+
+      // Submit the form using AJAX
+      $.ajax({
+        url: $(this).attr('action'),
+        type: 'POST',
+        data: $(this).serialize(),
+        success: function(response) {
+        // Handle the response and display validation result
+        if (response.valid) {
+            $('#discount-message').text('Discount code is valid and will be applied at checkout!');
+        } else {
+            $('#discount-message').text('Discount code is invalid.');
+        }
+        },
+        error: function() {
+          alert('An error occurred during discount code validation.');
+        }
+      });
+    });
+  });
+    </script>
 {% endblock %}

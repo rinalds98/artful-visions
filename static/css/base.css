@@ -93,6 +93,18 @@ body {
     color: white;
     width: 90%;
 }
+.discount-button {
+    background: black;
+    border-radius: 12px;
+    color: white;
+}
+
+.discount-button:hover {
+    background: white;
+    border-radius: 12px;
+    border: 1px solid black;
+    color: black;
+}
 
 .checkout-button:hover {
     background: white;

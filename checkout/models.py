@@ -5,6 +5,7 @@ from django.conf import settings
 from django_countries.fields import CountryField
 from profiles.models import UserProfile
 from products.models import Product
+from discounts.models import DiscountCode
 
 
 class Order(models.Model):
@@ -66,11 +67,11 @@ class Order(models.Model):
         blank=True,
     )
     date = models.DateTimeField(auto_now_add=True)
-    delivery_cost = models.DecimalField(
-        max_digits=6,
-        decimal_places=2,
-        null=False,
-        default=0,
+    discount = models.ForeignKey(
+        DiscountCode,
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True
     )
     order_total = models.DecimalField(
         max_digits=10,
@@ -100,8 +101,7 @@ class Order(models.Model):
 
     def update_total(self):
         """
-        Update grand total each time a line item is added,
-        accounting for delivery costs.
+        Update the grand total, accounting for the discount.
         """
         self.order_total = (
             self.lineitems.aggregate(
@@ -111,8 +111,6 @@ class Order(models.Model):
             )["lineitem_total__sum"]
             or 0
         )
-        self.delivery_cost = 0
-        self.grand_total = self.order_total + self.delivery_cost
         self.save()
 
     def save(self, *args, **kwargs):
