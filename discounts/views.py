@@ -7,7 +7,7 @@ def discount_validation(request):
         discount_code = request.POST.get('discount_code')
         if discount_code:
             try:
-                request.session['discount_code'] = discount_code
+                discount = DiscountCode.objects.get(code=discount_code)
                 context = {'valid': True}
             except DiscountCode.DoesNotExist:
                 context = {'valid': False}
