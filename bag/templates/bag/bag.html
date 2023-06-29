@@ -178,6 +178,7 @@
         success: function(response) {
         // Handle the response and display validation result
         if (response.valid) {
+            alert('Discount code applied successfully!');
             $('#discount-message').text('Discount code is valid and will be applied at checkout!');
         } else {
             $('#discount-message').text('Discount code is invalid.');

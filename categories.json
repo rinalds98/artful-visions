@@ -1,0 +1,42 @@
+[
+    {
+        "pk": 1,
+        "model": "products.category",
+        "fields": {
+            "name": "landscape_photos",
+            "friendly_name": "Landscape Photos"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "products.category",
+        "fields": {
+            "name": "urban_photos",
+            "friendly_name": "Urban Photos"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "products.category",
+        "fields": {
+            "name": "photos",
+            "friendly_name": "Photos"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "products.category",
+        "fields": {
+            "name": "deals",
+            "friendly_name": "Deals"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "products.category",
+        "fields": {
+            "name": "digital_presets",
+            "friendly_name": "Digital Presets"
+        }
+    }
+]

@@ -64,9 +64,11 @@
                         <p class="my-0">Grand Total:</p>
                     </div>
                     <div class="col-3">
+                        {{ discount_code }}
                         <p class="my-0">${{ total | floatformat:2 }}</p>
-                        <p class="my-0">{{ discount| floatformat:0 }}%</p>
+                        <p class="my-0">{{ discount | floatformat:0 }}%</p>
                         <p class="my-0"><strong>${{ grand_total | floatformat:2 }}</strong></p>
+                        
                     </div>
                 </div>
             </div>
