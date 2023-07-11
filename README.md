@@ -122,7 +122,7 @@ Agile Development
 This project was developed using agile development by adding small features during the length of the project. All user stories were assigned labels (Must Have, Should Have, Could Have). They were assigned based on the importance of the project and its functionality.
 
 The KanBan board can be accessed from the following link -
-[Kan Ban Board](https://github.com/users/rinalds98/projects/3/views/1 "Kan Ban Board")
+[Kan Ban Board](https://github.com/users/rinalds98/projects/4/views/1 "Kan Ban Board")
 
 
 A Kanban board was created using GitHub projects where all the user stories were shown in a card format.

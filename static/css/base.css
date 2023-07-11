@@ -458,17 +458,20 @@ label:focus-within ~ label:before {
 
 
 /* --------------------------------- FAQ Page */
-.image-wrapper{
-    background: url('../../media/faq.jpg') no-repeat center center fixed;
+.image-holder-faq {
+    background: url('../../media/faq.jpg') no-repeat right center fixed;
     background-size: cover;
     height: 100vh;
     color: #555;
 }
 
-.form-wrapper {
-    padding: 20px;
-    background: #fff;
+@media (min-width: 900px) {
+    .about-me {
+        width: 50%;
+        margin: 0 auto;
+    }
 }
+
 /* --------------------------------- Footer */
 footer{
     margin-top: auto;
