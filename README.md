@@ -10,6 +10,7 @@ The website can be viewed here: [Artful Visions](https://artful-visions-e583fd12
 
 # Table of contents
 - [User Experience](#userexperience)
+- [Marketing](#marketing)
 - [Agile Development](#agile)
 - [Features](#features)
 - [Future Ideas / Development](#future)
@@ -79,6 +80,39 @@ User Experience
    - Buttons to do actions would be black and white, that when hovering over would change to the opposite color..
         - ![Color Scheme](/static/images/color.png)
 
+<div id='marketing'/>
+
+Marketing
+=
+
+## Business Model
+
+# 1. Value Proposition
+- High-quality Prints: Offer a wide range of prints featuring various styles, and sizes, ensuring the best quality.
+- Digital Presets: Provide digital presets that enable customers to enhance their photos easily, achieving professional results and saving time in the editing process.
+
+# 2. Target Market
+- Photography Enthusiasts: Appeal to individuals passionate about photography, seeking high-quality prints to decorate their spaces and digital presets to enhance their photos.
+- Social Media Users: Influencers, bloggers, and individuals who want to enhance their social media presence with aesthetically pleasing photos and presets.
+
+# 3. Revenue Generation
+- Print Sales: Earn revenue through the sale of prints, charging prices based on factors like print size.
+- Digital Preset Sales: Generate revenue by selling digital presets individually or in preset packs, considering factors like the complexity and uniqueness of the presets.
+
+# 4. Distribution Channels:
+- E-commerce Website: Establish an intuitive and user-friendly website with a secure payment system, allowing customers to browse, select, and purchase prints and digital presets conveniently.
+- Digital Download: Provide a seamless digital download process for customers to access their purchased digital presets immediately upon completing the transaction.
+- Shipping: Arrange for the safe packaging and shipping of physical prints, ensuring they reach customers in pristine condition.
+
+# 5. Marketing and Promotion:
+- Online Marketing: Utilize digital marketing strategies such as search engine optimization (SEO), content marketing, social media advertising, and email marketing to reach and engage with the target audience.
+
+## Facebook Mockup
+- A Facebook mockup page has been created to showcase the platform's latest updates, featured prints, digital presets, and promotional content. This will serve as a key marketing channel for reaching and engaging with potential customers.
+
+- ![Facebook Page](media/facebook.jpg)
+
+
 <div id='agile'/>
 
 Agile Development
@@ -92,7 +126,7 @@ The KanBan board can be accessed from the following link -
 
 
 A Kanban board was created using GitHub projects where all the user stories were shown in a card format.
-- ![Kan Ban Board](/static/images/kanban.png)
+- ![Kan Ban Board](/media/kanban.png)
 
 
 <div id='features'/>
@@ -244,11 +278,35 @@ The Following was tested manually and passed:
         - 2 options below each product are displayed ("Edit"/"Delete") and both work as intended.
 
 - **Bag/Cart**
+- All Nav links work as intended.
+- If shopping bag is empty:
+    - text displayed - 'Your bag is empty'
+    - keep shoppping button works as intended.
+- If items in shopping bag:
+    - User can update the quantity of product. (Price is adjusted accordingly) - A message alert shows up.
+    - Update / Remove buttons work as intended.
+    - Plus / Minus buttons work as intended.
+    - If product has sizes it will be displayed beside product name.
+    - If product doesn't have sizes it will display 'N/A'
+    - If the same product but different size is added to the bag. it will be a separate item in the bag.
+    - If the user adds a discount code in the bag. the user can see the discount in the checkout page.
+    - If the discount code is invalid, the user will be notified that the discount code is invalid.
+    - Keep shopping and secure checkout buttons work as intended bringing the user to the respective pages.
+
 
 - **Checkout**
+    - Order summary is identical to Bag including price.
+    - If discount is applied in Bag - It is displayed including the discounted price.
+    - If user has a profile and has saved details. - The details are in the order detail fields.
+    - Adjust bag and complete order buttons work as intended.
+    - When Complete Order button is pressed an overlay is displayed while payment is taken.
+
+- **Stripe**
+    - When checking payment logs on stripe - correct amount and payment confirmed
+    - Webhooks correctly installed - webhook log status 200 for all instances.
 
 - **Checkout Success**
-
+    - 
 - **Profile**
 
 
