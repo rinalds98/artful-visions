@@ -87,27 +87,27 @@ Marketing
 
 ## Business Model
 
-# 1. Value Proposition
+## **Value Proposition**
 - High-quality Prints: Offer a wide range of prints featuring various styles, and sizes, ensuring the best quality.
 - Digital Presets: Provide digital presets that enable customers to enhance their photos easily, achieving professional results and saving time in the editing process.
 
-# 2. Target Market
+## **Target Market**
 - Photography Enthusiasts: Appeal to individuals passionate about photography, seeking high-quality prints to decorate their spaces and digital presets to enhance their photos.
 - Social Media Users: Influencers, bloggers, and individuals who want to enhance their social media presence with aesthetically pleasing photos and presets.
 
-# 3. Revenue Generation
+## **Revenue Generation**
 - Print Sales: Earn revenue through the sale of prints, charging prices based on factors like print size.
 - Digital Preset Sales: Generate revenue by selling digital presets individually or in preset packs, considering factors like the complexity and uniqueness of the presets.
 
-# 4. Distribution Channels:
+## **Distribution Channels**
 - E-commerce Website: Establish an intuitive and user-friendly website with a secure payment system, allowing customers to browse, select, and purchase prints and digital presets conveniently.
 - Digital Download: Provide a seamless digital download process for customers to access their purchased digital presets immediately upon completing the transaction.
 - Shipping: Arrange for the safe packaging and shipping of physical prints, ensuring they reach customers in pristine condition.
 
-# 5. Marketing and Promotion:
+## **Marketing and Promotion**
 - Online Marketing: Utilize digital marketing strategies such as search engine optimization (SEO), content marketing, social media advertising, and email marketing to reach and engage with the target audience.
 
-## Facebook Mockup
+## **Facebook Mockup**
 - A Facebook mockup page has been created to showcase the platform's latest updates, featured prints, digital presets, and promotional content. This will serve as a key marketing channel for reaching and engaging with potential customers.
 
 - ![Facebook Page](media/facebook.jpg)
@@ -428,6 +428,21 @@ Technologies Used
 
 Credits
 =
+Main Homepage Photo
+- https://unsplash.com/photos/jg-6ARMiaPM
 
+About Me Photo
+- https://unsplash.com/photos/DQPP9rVLYGQ
+
+FAQ Section
+- https://unsplash.com/photos/9qYKMbBCFjc
+
+All other photos are my own content and work.
 
 ## **Content**
+
+Code Institute Boutique Ado walthrough project boilerplate code.
+
+Css Tricks Code:
+- https://css-tricks.com/snippets/css/css-triangle/ 
+- https://css-tricks.com/css-link-hover-effects/
