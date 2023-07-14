@@ -4,7 +4,7 @@ Artful Visions
 Introduction
 =
 
-Artful Visions is a Photography E-Commerce website with a fully functioning payment system. Users accwssing this website will be able to add a prouct to cart, Add a discount and purchase the product. Users can leave reviews on products and add a testimonial that the admin can accept to be placed on the home page.
+Artful Visions is a Photography E-Commerce website with a fully functioning payment system. Users accsesing this website will be able to add a prouct to cart, Add a discount code and purchase products. Users can leave reviews on products and add a testimonial that the admin can accept to be placed on the home page.
 
 The website can be viewed here: [Artful Visions](https://artful-visions-e583fd12b6db.herokuapp.com/ "Artful Visions").
 
@@ -48,7 +48,8 @@ User Experience
 # 1. Strategy
 
 - The main purpose of this website is so users can browse products and purchase them.
-- Each user creates an account so they can view their previous orders.
+- Each user can create an account so they can view their previous orders.
+- Users can leave reviews and a testimonial.
 
 # 2. Scope
 - After a few design choices. A simple navigation bar with link in the middle and account/registration and cart in the right was chosen for ease of navigation.
@@ -137,32 +138,40 @@ Features
 The website Artful Visions is a simple website that allows the user to purchase photos and lightroom presets.. Even though it looks very simple on the outside there are a lot of things working in the background so the user can have a pleasant experience while using the website.
 
 - ## **Home Page**
-    - When the user first accesses the website he is greeted with a simple homepage design with a background image of the photograher. The name of the photography store and a call to action to browse photography products. There is also a Nav bar to access different parts of the website such as shop, about and FAQ. There is a 'My Accounts' button that has Log-In/Log-Out/Register buttons depending on the user's status. Finally there is a shopping cart that dynamically updates as a user adds items to the shopping cart.
-        - ![Homepage](/static/images/homepage.png)
+    - When the user first accesses the website they are greeted with a simple homepage design with a background image of the photograher. The name of the photography store and a call to action to browse photography products. There is also a Nav bar to access different parts of the website such as shop, about and FAQ. There is a 'My Accounts' button that has Log-In/Log-Out/Register buttons depending on the user's status. Finally there is a shopping cart that dynamically updates as a user adds items to the shopping cart.
+        - ![Homepage](/media/homepage.png)
 
 - ## **Product Section**
     - The product section shows products in a card style using Bootstrap. The user can see a photo of the product and pricing.
-        - ![Product Section](/static/images/review.png)
+        - ![Product Section](/media/products.png)
 
 - ## **Product Detail Section**
     - The product detail section has a very simplistic design. It allows the user to select a size for the photo if applicable and they can add the quantity of the item they want. If a product doesnt have a size it will only show the quantity option.
-        - ![Product Detail Reservations](/static/images/createreservation.png)
+        - ![Product Detail Section](/media/product_detail.png)
 
 - ## **Bag/Cart Section**
     - After the user has added an item to the bag. They can go to manage their cart in the bag section. It shows the item, quantity and total price. They can also add a discount code to the order to receive a discounted price. If the user inputs the wrong discount code, the user will get alert about it.
-        -![Bag/Cart Section](/static/images/manage.png)
+        -![Bag/Cart Section](/media/bag.png)
+
+- ## **Profile Section**
+    - If the user has created an account. They will be able to access their profile. Here they can update their personal information and view previous orders.
+        -![profile Section](/media/profile.png)
+
+- ## **Testimonial Section**
+    - In the profile section if the user wishes they can add a testimonial for the admin to review. if the admin accepts the testimonial it will get posted on the homepage.
+        -![testimonial Section](/media/testimonial.png)
 
 - ## **Checkout Section**
     - Once the user is happy with what they want. They proceed to the checkout section. Here the user will be asked to add in their personal details and credit card information. If the user has an account and wishes to save his information for further purchases he has the option to check a box.
-        - ![Checkout Section](/static/images/update.png)
+        - ![Checkout Section](/media/checkout.png)
 
 - ## **Checkout Success Section**
     - After the user has successfully paid for their order. They will be shown the checkout success page. In essence it's a order summary of the user's order.
-        - ![Checkout Success Section](/static/images/modal.png)
+        - ![Checkout Success Section](/media/checksuccess.png)
 
 - ## **Footer**
     - A very simple footer was chosen with a Facebook icon that link to the business's social account. they use 'target=_blank' so if the user clicks they won't navigate anyway from the website. There is also an embedded mailchimp newsletter signup feature. 
-        - ![Footer](/static/images/footer.png)
+        - ![Footer](/media/footer.png)
 
 <div id='future'/>
 
@@ -207,9 +216,7 @@ The way to fix this would be to use javascript for the star rating system rather
         - models.py
         - urls.py
         - views.py
-    - While checking if everything was pep8 compliant I noticed the Django-provided code inside of the settings.py file was not. I was not able to fix this as the links in the 'AUTH_PASSWORD_VALIDATORS' were too long.
-        - ![settings.py](/static/images/settings.png)
-
+    - While checking if everything was pep8 compliant I noticed the Django-provided code inside of the settings.py file was not.
 
 - **HTML Validator**
     - I ran my website through  [HTML Validator](https://validator.w3.org/ "HTML Validator") and received no errors.
@@ -295,8 +302,8 @@ The Following was tested manually and passed:
 
 
 - **Checkout**
-    - Order summary is identical to Bag including price.
-    - If discount is applied in Bag - It is displayed including the discounted price.
+    - Order summary is identical to bag including price.
+    - If discount is applied in bag - It is displayed including the discounted price.
     - If user has a profile and has saved details. - The details are in the order detail fields.
     - Adjust bag and complete order buttons work as intended.
     - When Complete Order button is pressed an overlay is displayed while payment is taken.
@@ -306,9 +313,31 @@ The Following was tested manually and passed:
     - Webhooks correctly installed - webhook log status 200 for all instances.
 
 - **Checkout Success**
-    - 
-- **Profile**
+    - When payment has been completed, an order summary is shown with all the correct information and prices.
+    - the button that brings the user back to the products page works as intended.
 
+- **Profile**
+    - If the user adds personal information to the profile and clicks 'update information' the information is saved and it shows up at checkout next time the user wants to purchase something.
+    - A user can see previous orders that they have put through. Clicking on the order will reveal the order summary page.
+    - If the user adds a testimonial, it will be sent to the admin panel where it can be either confirmed (to be added to the homepage) or deleted.
+
+- **Product Management / Edit Product**
+    - If a superuser tries to add a product it won't allow to add a product without Name and description.
+    - if product 'has sizes' hasn't been checked:
+        - If price is added in the first section then this will be displayed.
+        - (Bug Found) If you add a size and price (product size section) but do not select 'has-sizes' checkbox. This doesn't allow you to properly edit the product after it has been created. (required to go in the admin panel to fix.)
+    - if product 'has sizes' has been checked:
+        - If size and price gets added to the product sizes section they will be displayed.
+        - If you add 2 of the same sizes. Both will be displayed but only the first price will be displayed no matter which of the duplicate sizes is selected.
+        - individual sizes can be deleted.
+        - (Bug/ Inconvience Found) When a user wants to add multiple sizes to a product they are only allowed to add 1 size at a time. Save the product and then select 'edit' to add another size.
+
+- **Discount Codes**
+    - Discount codes are added via the admin panel.
+    - if a user inputs a invalid discount code a error message will be displayed.
+    - If a user inputs a valid discount code a confirmation message will be displayed.
+    - The discount will appear on the checkout page with a percentage.
+    - On the checkout success page (order summary) If a discount code is used - It will show the code used and the discount percentage applied.
 
 - **Log-In/Log-Out/Register Pages**
 - The log-In/Log-Out/Register sections are managed by OAuth Library.
@@ -436,6 +465,10 @@ About Me Photo
 
 FAQ Section
 - https://unsplash.com/photos/9qYKMbBCFjc
+
+noimage.png
+- Image taken from Code Institutes Boutique Ado walkthrough project
+
 
 All other photos are my own content and work.
 
