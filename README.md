@@ -81,7 +81,6 @@ User Experience
    - The basic color scheme would be Black, White and the accents would be Orange. The images would have a more 
      dominant orange color.
    - Buttons would be black and white, and when hovering over would change to the opposite color.
-        - ![Color Scheme](/static/images/color.png)
 
 <div id='marketing'/>
 
@@ -174,7 +173,7 @@ The website Artful Visions is a simple website that allows the user to purchase 
         - ![Checkout Success Section](/media/checksuccess.png)
 
 - ## **Footer**
-    - A very simple footer was chosen with a Facebook icon that links to the business's social account. they use 'target=_blank' so if the user clicks they won't navigate anyway from the website. There is also an embedded MailChimp newsletter signup feature. 
+    - A very simple footer was chosen with a Facebook icon that links to the business's social account. they use 'target=_blank' so if the user clicks they won't navigate anyway from the website. the rel 'noopener' was added as this prevents the new page having any access to the tab/session that opened it, preventing common phishing attack vectors. There is also an embedded MailChimp newsletter signup feature.
         - ![Footer](/media/footer.png)
 
 <div id='future'/>
@@ -454,6 +453,8 @@ Technologies Used
     - urllib3
     - Pillow
     - Django Crispy Forms
+    - gmail - for email sending
+    - canva (for photo editing) 
 
 <div id='credits'/>
 
