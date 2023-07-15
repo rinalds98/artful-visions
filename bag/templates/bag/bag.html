@@ -92,7 +92,7 @@
                                     <form id="discount-form" method="post" action="{% url 'discount_validation' %}">
                                         {% csrf_token %}
                                         <input type="text" name="discount_code" id="discount-code-input">
-                                        <button class="btn discount-button btn-sm my-2 ml-2" type="submit">Apply Discount</button>
+                                        <button class="btn misc-button btn-sm my-2 ml-2" type="submit">Apply Discount</button>
                                       </form>
                                     <div id="discount-message" class="my-2"></div>
                                     <h6><strong>Bag Total: ${{ total|floatformat:2 }}</strong></h6>

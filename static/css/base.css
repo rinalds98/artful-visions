@@ -37,7 +37,7 @@ body {
 }
 
 .info-icon {
-    color: #f98f24;
+    color: #E07000;
     padding-right: 20px;
     margin-bottom: 20px;
     font-size: 2rem;
@@ -93,13 +93,13 @@ body {
     color: white;
     width: 90%;
 }
-.discount-button {
+.misc-button {
     background: black;
     border-radius: 12px;
     color: white;
 }
 
-.discount-button:hover {
+.misc-button:hover {
     background: white;
     border-radius: 12px;
     border: 1px solid black;
@@ -116,6 +116,17 @@ body {
 .btn-black {
     background: black;
     color: white;
+}
+
+.btn-black-product {
+    background: black;
+    color: white;
+}
+
+.btn-black-product:hover {
+    background: white;
+    color: black;
+    border: 1px solid black;
 }
 
 .btn-outline-black {
@@ -241,7 +252,7 @@ input[name='q']::placeholder {
       width: 100%;
       height: 4px;
       border-radius: 4px;
-      background-color: #f98f24;
+      background-color: #E07000;
       bottom: 0;
       left: 0;
       transform-origin: right;

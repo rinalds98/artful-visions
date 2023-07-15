@@ -11,9 +11,7 @@
                 <p class="display-6 logo-font text-white">Now Available:</p>
                 <h1 class="display-5 logo-font text-white"><strong>Lightroom Presets</strong></h1>
                 <div class="my-5">
-                    <h4>
-                        <a href="{% url 'products' %}" class="shop-now-button btn btn-lg text-uppercase py-3">Shop Now</a>
-                    </h4>
+                    <a href="{% url 'products' %}" class="shop-now-button btn btn-lg text-uppercase py-3">Shop Now</a>
                 </div>
             </div>
         </div>
@@ -112,7 +110,7 @@
                 </div>
                 <div class="card-body">
                   <p class="card-text">{{ testimonial.testimonial }}</p>
-                  <h5 class="card-title text-center">{{ testimonial.user }}</h5>
+                  <p class="card-title text-center">{{ testimonial.user }}</p>
                 </div>
               </div>
             </div>
