@@ -68,11 +68,13 @@ User Experience
 ## **Design**
 - The initial design was made using Wireframes.
 
-    - ![Wireframe](/static/images/wireframe.png)
+    - ![Wireframe](/media/wireframe.png)
 
-- The initial idea of how the system was going to work was sketched on Lucid Charts:
+## **Database ERD**
+- The data model type used for this project is the Relational Model - User (allauth), Profile, Product, Category, Review, Order, OrderLineItem.
+- The ERD was created / designed using LucidChart.
 
-    - ![Lucid Charts](/static/images/lucid-chart.png)
+    - ![Lucid Charts](/media/erd.png)
 
 # 5. Surface
  - ## **Color**
@@ -148,6 +150,8 @@ The website Artful Visions is a simple website that allows the user to purchase 
 - ## **Product Detail Section**
     - The product detail section has a very simplistic design. It allows the user to select a size for the photo if applicable and they can add the quantity of the item they want. If a product doesnt have a size it will only show the quantity option.
         - ![Product Detail Section](/media/product_detail.png)
+    - user can also leave reviews of products they have purchased.
+        - ![Review Section](/media/review.png)
 
 - ## **Bag/Cart Section**
     - After the user has added an item to the bag. They can go to manage their cart in the bag section. It shows the item, quantity and total price. They can also add a discount code to the order to receive a discounted price. If the user inputs the wrong discount code, the user will get alert about it.
@@ -235,7 +239,7 @@ The way to fix this would be to use javascript for the star rating system rather
 
 - **Lighthouse Check**
     - This was my Lighthouse check
-    ![lighthouse Check](/static/images/lighthouse.png)
+    ![lighthouse Check](/media/lighthouse.png)
 
 
 ## **Manual Testing**
@@ -325,7 +329,6 @@ The Following was tested manually and passed:
     - If a superuser tries to add a product it won't allow to add a product without Name and description.
     - if product 'has sizes' hasn't been checked:
         - If price is added in the first section then this will be displayed.
-        - (Bug Found) If you add a size and price (product size section) but do not select 'has-sizes' checkbox. This doesn't allow you to properly edit the product after it has been created. (required to go in the admin panel to fix.)
     - if product 'has sizes' has been checked:
         - If size and price gets added to the product sizes section they will be displayed.
         - If you add 2 of the same sizes. Both will be displayed but only the first price will be displayed no matter which of the duplicate sizes is selected.

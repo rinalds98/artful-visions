@@ -21,16 +21,14 @@
                 <form method="post" enctype="multipart/form-data">
                     {% csrf_token %}
                     {{ product_form | crispy }}
-                    {% if product.has_sizes %}
                     <h3>Product Sizes</h3>
                     {{ size_formset.management_form }}
                     {% for form in size_formset %}
                         {{ form | crispy }}
                     {% endfor %}
-                    {% endif %}
                     <div class="text-right">
-                        <a class="btn btn-outline-black rounded-0" href="{% url 'products' %}">Cancel</a>
-                        <button class="btn btn-black rounded-0" type="submit">Update Product</button>
+                        <a class="btn btn-outline-black rounded-2" href="{% url 'products' %}">Cancel</a>
+                        <button class="btn btn-black-product rounded-2" type="submit">Update Product</button>
                     </div>
                 </form>
             </div>            
