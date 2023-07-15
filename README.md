@@ -490,3 +490,6 @@ CSS Tricks Code:
 
 Article on how to convert a decimal to a json string was a very helpful article.
 - https://bobbyhadz.com/blog/python-typeerror-object-of-type-decimal-is-not-json-serializable
+
+Article on Ajax was very helpful in understanding ajax and getting the discount code working how I want.
+- https://testdriven.io/blog/django-ajax-xhr/
