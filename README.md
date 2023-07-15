@@ -487,3 +487,6 @@ Code Institute Boutique Ado walkthrough project boilerplate code.
 CSS Tricks Code:
 - https://css-tricks.com/snippets/css/css-triangle/ 
 - https://css-tricks.com/css-link-hover-effects/
+
+Article on how to convert a decimal to a json string was a very helpful article.
+- https://bobbyhadz.com/blog/python-typeerror-object-of-type-decimal-is-not-json-serializable
