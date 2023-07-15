@@ -30,6 +30,7 @@ User Experience
     1. The website provides an easy and friendly experience when browsing the website.
     2. The website alerts the user/admin when they complete an action ie. register/purchase/update/delete.
     3. The website allows the user to purchase products and see previous customer reviews.
+    4. The website allows the user to search and sort products.
 ------
 
 - ## **As a website user I want:**
@@ -37,6 +38,9 @@ User Experience
     2. Confident that the payment system is safe and secure. (Stripe)
     3. Any actions that the user does gets displayed as alerts.
     4. To be able to register an account.
+    5. To search for a product.
+    6. To receive an order confirmation if I make a purchase.
+    7. Select quantity and size (if available).
  ------
 
 - ## **As a returning website user I want:**
@@ -94,6 +98,7 @@ Marketing
 - Digital Presets: Provide digital presets that enable customers to enhance their photos easily, achieving professional results and saving time in the editing process.
 
 ## **Target Market**
+- The main target audience will be B2C Focused.
 - Photography Enthusiasts: Appeal to individuals passionate about photography, seeking high-quality prints to decorate their spaces and digital presets to enhance their photos.
 - Social Media Users: Influencers, bloggers, and individuals who want to enhance their social media presence with aesthetically pleasing photos and presets.
 
