@@ -4,7 +4,7 @@ Artful Visions
 Introduction
 =
 
-Artful Visions is a Photography E-Commerce website with a fully functioning payment system. Users accsesing this website will be able to add a product to cart, Add a discount code and purchase products. Users can leave reviews on products and add a testimonial that the admin can accept to be placed on the home page.
+Artful Visions is a Photography E-Commerce website with a fully functioning payment system. Users accessing this website will be able to add a product to their cart, Add a discount code, and purchase products. Users can leave reviews on products and add a testimonial that the admin can accept to be placed on the home page.
 
 The website can be viewed here: [Artful Visions](https://artful-visions-e583fd12b6db.herokuapp.com/ "Artful Visions").
 
@@ -29,7 +29,7 @@ User Experience
 
     1. The website provides an easy and friendly experience when browsing the website.
     2. The website alerts the user/admin when they complete an action ie. register/purchase/update/delete.
-    3. The website allows the user to purchase products and to see previous customer reviews.
+    3. The website allows the user to purchase products and see previous customer reviews.
 ------
 
 - ## **As a website user I want:**
@@ -52,16 +52,16 @@ User Experience
 - Users can leave reviews and a testimonial.
 
 # 2. Scope
-- After a few design choices. A simple navigation bar with link in the middle and account/registration and cart in the right was chosen for ease of navigation.
+- After a few design choices. A simple navigation bar with the link in the middle and account/registration and cart in the right was chosen for ease of navigation.
 - Using UX design, mobile responsiveness, and simple color profile.
 
 # 3. Structure
 - The user would be greeted with a photo of the photographer and a call to action button.
-- To buy a product they would have to browse to products add to cart and then go to checkout.
+- To buy a product they would have to browse to products add to the cart and then go to checkout.
 - The users would be able to add a discount code to get a discount on the final price.
 - The user would be alerted if the checkout was successful or that the checkout failed due payment error.
-- The user could then see their previous orders that they have placed.
-- In the profile page the user can add their information so that the checkout process is quicker and easier.
+- The user could then see the previous orders that they have placed.
+- On the profile page the user can add their information so that the checkout process is quicker and easier.
 - Users can use the search feature to search for a product that they are looking for.
 
 # 4. Skeleton
@@ -71,8 +71,8 @@ User Experience
     - ![Wireframe](/media/wireframe.png)
 
 ## **Database ERD**
-- The data model type used for this project is the Relational Model - User (allauth), Profile, Product, Category, Review, Order, OrderLineItem.
-- The ERD was created / designed using LucidChart.
+- The data model type used for this project is the Relational Model - User (Allauth), Profile, Product, Category, Review, Order, OrderLineItem.
+- The ERD was created/designed using LucidChart.
 
     - ![Lucid Charts](/media/erd.png)
 
@@ -80,7 +80,7 @@ User Experience
  - ## **Color**
    - The basic color scheme would be Black, White and the accents would be Orange. The images would have a more 
      dominant orange color.
-   - Buttons to do actions would be black and white, that when hovering over would change to the opposite color..
+   - Buttons would be black and white, and when hovering over would change to the opposite color.
         - ![Color Scheme](/static/images/color.png)
 
 <div id='marketing'/>
@@ -137,10 +137,10 @@ A Kanban board was created using GitHub projects where all the user stories were
 Features
 =
 
-The website Artful Visions is a simple website that allows the user to purchase photos and lightroom presets.. Even though it looks very simple on the outside there are a lot of things working in the background so the user can have a pleasant experience while using the website.
+The website Artful Visions is a simple website that allows the user to purchase photos and Lightroom presets. Even though it looks very simple on the outside there are a lot of things working in the background so the user can have a pleasant experience while using the website.
 
 - ## **Home Page**
-    - When the user first accesses the website they are greeted with a simple homepage design with a background image of the photograher. The name of the photography store and a call to action to browse photography products. There is also a Nav bar to access different parts of the website such as shop, about and FAQ. There is a 'My Accounts' button that has Log-In/Log-Out/Register buttons depending on the user's status. Finally there is a shopping cart that dynamically updates as a user adds items to the shopping cart.
+    - When the user first accesses the website they are greeted with a simple homepage design with a background image of the photographer. The name of the photography store and a call to action to browse photography products. There is also a Nav bar to access different parts of the website such as shop, about, and FAQ. There is a 'My Accounts' button that has Log-In/Log-Out/Register buttons depending on the user's status. Finally, there is a shopping cart that dynamically updates as a user adds items to the shopping cart.
         - ![Homepage](/media/homepage.png)
 
 - ## **Product Section**
@@ -148,13 +148,13 @@ The website Artful Visions is a simple website that allows the user to purchase 
         - ![Product Section](/media/products.png)
 
 - ## **Product Detail Section**
-    - The product detail section has a very simplistic design. It allows the user to select a size for the photo if applicable and they can add the quantity of the item they want. If a product doesnt have a size it will only show the quantity option.
+    - The product detail section has a very simplistic design. It allows the user to select a size for the photo if applicable and they can add the quantity of the item they want. If a product doesn't have a size it will only show the quantity option.
         - ![Product Detail Section](/media/product_detail.png)
-    - user can also leave reviews of products they have purchased.
+    - Users can also leave reviews of products they have purchased.
         - ![Review Section](/media/review.png)
 
 - ## **Bag/Cart Section**
-    - After the user has added an item to the bag. They can go to manage their cart in the bag section. It shows the item, quantity and total price. They can also add a discount code to the order to receive a discounted price. If the user inputs the wrong discount code, the user will get alert about it.
+    - After the user has added an item to the bag. They can go to manage their cart in the bag section. It shows the item, quantity, and total price. They can also add a discount code to the order to receive a discounted price. If the user inputs the wrong discount code, the user will get an alert about it.
         -![Bag/Cart Section](/media/bag.png)
 
 - ## **Profile Section**
@@ -170,11 +170,11 @@ The website Artful Visions is a simple website that allows the user to purchase 
         - ![Checkout Section](/media/checkout.png)
 
 - ## **Checkout Success Section**
-    - After the user has successfully paid for their order. They will be shown the checkout success page. In essence it's a order summary of the user's order.
+    - After the user has successfully paid for their order. They will be shown the checkout success page. In essence, it's an order summary of the user's order.
         - ![Checkout Success Section](/media/checksuccess.png)
 
 - ## **Footer**
-    - A very simple footer was chosen with a Facebook icon that link to the business's social account. they use 'target=_blank' so if the user clicks they won't navigate anyway from the website. There is also an embedded mailchimp newsletter signup feature. 
+    - A very simple footer was chosen with a Facebook icon that links to the business's social account. they use 'target=_blank' so if the user clicks they won't navigate anyway from the website. There is also an embedded MailChimp newsletter signup feature. 
         - ![Footer](/media/footer.png)
 
 <div id='future'/>
@@ -200,7 +200,7 @@ Testing
 
 ## **Solved Bugs**
 - The discount code wasn't reducing the total cost of the order properly at checkout success.
-- The deployed version of the project didn't have the database properly set up through elephant SQL.
+- The deployed version of the project didn't have the database properly set up through Elephant SQL.
 
 ## **Unfixed Bugs**
 - once a user selects a rating if they click away or decide they want to write a review the star rating selection disappears.
@@ -234,7 +234,7 @@ The way to fix this would be to use javascript for the star rating system rather
     - I ran my website through  [JS Validator](https://jshint.com/ "JS Validator") and received no errors only undefined $ for jquery.
 
 - **Console Errors**
-    - There was no console errors found.
+    - There were no console errors found.
     ![Console Check](/media/console.png)
 
 - **Lighthouse Check**
@@ -251,13 +251,13 @@ The Following was tested manually and passed:
         - Shop - brings the user to the products page.
         - My Account -> Log-In/Register - brings the user to the respective pages.
         - Search - Works as intended and searches the database with a query.
-        - Cart/Bag - Works as intended by bringing the user to the Bag section. It also displays total bag value if the user has something added to the cart.
-        - Does not show 'Log-Out', 'My Profile' or (*'Product Management' - Only shows if user is superuser)* nav links
+        - Cart/Bag - Works as intended by bringing the user to the Bag section. It also displays the total bag value if the user has something added to the cart.
+        - Does not show 'Log-Out', 'My Profile, or (*'Product Management' - Only shows if a user is a superuser)* nav links
     - User Logged In:
         - Home link - works as intended bringing the user back to the home page.
         - shop - brings the user to the products page.
         - Search - Works as intended and searches the database with a query.
-        - Cart/Bag - Works as intended by bringing the user to the Bag section. It also displays total bag value if the user has something added to the cart.
+        - Cart/Bag - Works as intended by bringing the user to the Bag section. It also displays the total bag value if the user has something added to the cart.
         - Log-Out - brings the user to the log-Out page.
         - Does not show 'Log-In' or 'Register' nav links.
 
@@ -267,11 +267,11 @@ The Following was tested manually and passed:
         - 'Buy Now' button works as intended - brings the user to the product detail page of the product.
 
 - **Products Section**
-    - If Product Has Sizes
+    - If the Product Has Sizes
         - The smallest size price is shown with text displayed - "Starting From".
-    - If Product Doesn't Have Sizes
+    - If the Product Doesn't Have Sizes
         - The correct price is shown and there is no text displayed - "Starting From".
-    - if User is a superuser
+    - if the User is a superuser
         - 2 options below each product are displayed ("Edit"/"Delete") and both work as intended.
 
 - **Product Detail**
@@ -280,39 +280,39 @@ The Following was tested manually and passed:
     - Product doesn't have sizes:
         - The only option available will be the quantity selector.
     - The quantity selector only allows to select between 1-99.
-    - "keep shopping" button brings the user back to the products page.
+    - "Keep shopping" button brings the user back to the products page.
     - "Add to Bag" button adds the product and selected quantity to the bag/cart.
     - If the user is logged in they will be able to add a review about the product.
     - If the user is not logged in they will only be allowed to view reviews.
-    - if User is a superuser
+    - if the User is a superuser
         - 2 options below each product are displayed ("Edit"/"Delete") and both work as intended.
 
 - **Bag/Cart**
 - All Nav links work as intended.
-- If shopping bag is empty:
-    - text displayed - 'Your bag is empty'
-    - keep shoppping button works as intended.
+- If the shopping bag is empty:
+    - text displayed - 'Your bag is empty
+    - 'keep shopping' button works as intended.
 - If items in shopping bag:
     - User can update the quantity of product. (Price is adjusted accordingly) - A message alert shows up.
     - Update / Remove buttons work as intended.
     - Plus / Minus buttons work as intended.
-    - If product has sizes it will be displayed beside product name.
-    - If product doesn't have sizes it will display 'N/A'
-    - If the same product but different size is added to the bag. it will be a separate item in the bag.
-    - If the user adds a discount code in the bag. the user can see the discount in the checkout page.
+    - If the product has sizes it will be displayed beside the product name.
+    - If the product doesn't have sizes it will display 'N/A'
+    - If the same product but a different size is added to the bag. it will be a separate item in the bag.
+    - If the user adds a discount code to the bag. the user can see the discount on the checkout page.
     - If the discount code is invalid, the user will be notified that the discount code is invalid.
     - Keep shopping and secure checkout buttons work as intended bringing the user to the respective pages.
 
 
 - **Checkout**
     - Order summary is identical to bag including price.
-    - If discount is applied in bag - It is displayed including the discounted price.
-    - If user has a profile and has saved details. - The details are in the order detail fields.
-    - Adjust bag and complete order buttons work as intended.
-    - When Complete Order button is pressed an overlay is displayed while payment is taken.
+    - If a discount is applied to the bag - It is displayed including the discounted price.
+    - If the user has a profile and has saved details. - The details are in the order detail fields.
+    - Adjust bag and complete order buttons to work as intended.
+    - When the Complete Order button is pressed an overlay is displayed while payment is taken.
 
 - **Stripe**
-    - When checking payment logs on stripe - correct amount and payment confirmed
+    - When checking payment logs on Stripe - the correct amount and payment confirmed
     - Webhooks correctly installed - webhook log status 200 for all instances.
     ![Stripe Test](/media/stripetest.png)
 
@@ -321,22 +321,22 @@ The Following was tested manually and passed:
     - the button that brings the user back to the products page works as intended.
 
 - **Profile**
-    - If the user adds personal information to the profile and clicks 'update information' the information is saved and it shows up at checkout next time the user wants to purchase something.
+    - If the user adds personal information to the profile and clicks 'update information' the information is saved and it shows up at checkout the next time the user wants to purchase something.
     - A user can see previous orders that they have put through. Clicking on the order will reveal the order summary page.
     - If the user adds a testimonial, it will be sent to the admin panel where it can be either confirmed (to be added to the homepage) or deleted.
 
 - **Product Management / Edit Product**
     - If a superuser tries to add a product it won't allow to add a product without Name and description.
     - if product 'has sizes' hasn't been checked:
-        - If price is added in the first section then this will be displayed.
+        - If the price is added in the first section then this will be displayed.
     - if product 'has sizes' has been checked:
-        - If size and price gets added to the product sizes section they will be displayed.
+        - If size and price get added to the product sizes section they will be displayed.
         - If you add 2 of the same sizes. Both will be displayed but only the first price will be displayed no matter which of the duplicate sizes is selected.
         - individual sizes can be deleted.
 
 - **Discount Codes**
     - Discount codes are added via the admin panel.
-    - if a user inputs a invalid discount code a error message will be displayed.
+    - if a user inputs an invalid discount code an error message will be displayed.
     - If a user inputs a valid discount code a confirmation message will be displayed.
     - The discount will appear on the checkout page with a percentage.
     - On the checkout success page (order summary) If a discount code is used - It will show the code used and the discount percentage applied.
@@ -366,7 +366,7 @@ The Following was tested manually and passed:
     - Facebook social media link has a 'target="_blank"' so it opens a new tab instead of navigating away from the website.
 
 - **Alerts**
-    - Alerts have been programmed to pop up as toasts which is True.
+    - Alerts have been programmed to pop up as toasts that are True.
 
 <div id='deployment'/>
 
@@ -384,7 +384,7 @@ This project was deployed using GitHub and Heroku.
    - Choose Code Institutes Template.
    - Add a repository name and click "Create repository" at the bottom of the page.
    - Then, click the green code button to show the dropdown menu.
-   - Copy the github link to clone the repository.
+   - Copy the GitHub link to clone the repository.
    - In VSCode paste the link to clone the repository to VSCode.
 
 ### **VSCode and Django**
@@ -472,12 +472,12 @@ noimage.png
 - Image taken from Code Institutes Boutique Ado walkthrough project
 
 
-All other photos are my own content and work.
+All other photos are my content and work.
 
 ## **Content**
 
-Code Institute Boutique Ado walthrough project boilerplate code.
+Code Institute Boutique Ado walkthrough project boilerplate code.
 
-Css Tricks Code:
+CSS Tricks Code:
 - https://css-tricks.com/snippets/css/css-triangle/ 
 - https://css-tricks.com/css-link-hover-effects/
