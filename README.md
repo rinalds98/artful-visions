@@ -220,19 +220,18 @@ The way to fix this would be to use javascript for the star rating system rather
 
 - **HTML Validator**
     - I ran my website through  [HTML Validator](https://validator.w3.org/ "HTML Validator") and received no errors.
-    ![HTML Check](/static/images/htmlvalidator.png)
+    ![HTML Check](/media/htmlvalidator.png)
 
 - **CSS Validator**
     - I ran my website through  [CSS Validator](https://jigsaw.w3.org/css-validator/ "CSS Validator") and received no errors.
-    ![CSS Check](/static/images/cssvalidator.png)
+    ![CSS Check](/media/cssvalidator.png)
 
 - **JS Validator**
-    - I ran my website through  [JS Validator](https://jshint.com/ "JS Validator") and received no errors only undefined $ for jquery. An issue with bootstrap being undefined but because I am using bootstrap javascript I assume that's the reason why.
-    ![jS Check](/static/images/jshintvalidator.png)
+    - I ran my website through  [JS Validator](https://jshint.com/ "JS Validator") and received no errors only undefined $ for jquery.
 
 - **Console Errors**
     - There was no console errors found.
-    ![Console Check](/static/images/errorfree.png)
+    ![Console Check](/media/console.png)
 
 - **Lighthouse Check**
     - This was my Lighthouse check
