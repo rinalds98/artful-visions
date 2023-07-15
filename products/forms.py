@@ -6,25 +6,33 @@ from django.forms import inlineformset_factory
 class ProductForm(forms.ModelForm):
     class Meta:
         model = Product
-        fields = ['category', 'sku', 'name', 'description', 'price', 'has_sizes', 'image']
+        fields = [
+            "category",
+            "sku",
+            "name",
+            "description",
+            "price",
+            "has_sizes",
+            "image",
+        ]
 
 
 ProductSizeFormSet = inlineformset_factory(
-    Product, ProductSize, fields=('size', 'price'), extra=1, can_delete=False
+    Product, ProductSize, fields=("size", "price"), extra=5, can_delete=False
 )
 
 
 class ProductSizeForm(forms.ModelForm):
     class Meta:
         model = ProductSize
-        fields = ['size', 'price']
+        fields = ["size", "price"]
 
 
 ProductSizeFormSet = inlineformset_factory(
     Product,
     ProductSize,
     form=ProductSizeForm,
-    extra=1,
+    extra=5,
     can_delete=True,
 )
 

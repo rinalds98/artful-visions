@@ -50,8 +50,8 @@ def all_products(request):
                 )
                 return redirect(reverse("products"))
 
-            queries = Q(name__icontains=query) | Q(description__icontains=query)
-            products = products.filter(queries)
+            querie = Q(name__icontains=query) | Q(description__icontains=query)
+            products = products.filter(querie)
 
     current_sorting = f"{sort}_{direction}"
 
@@ -137,7 +137,7 @@ def add_product(request):
         messages.error(request, "Sorry, only store owners can do that.")
         return redirect(reverse("home"))
 
-    if request.method == 'POST':
+    if request.method == "POST":
         form = ProductForm(request.POST, request.FILES)
         size_formset = ProductSizeFormSet(request.POST)
 
@@ -146,17 +146,17 @@ def add_product(request):
             size_formset.instance = product
             size_formset.save()
 
-            return redirect('product_detail', product_id=product.id)
+            return redirect("product_detail", product_id=product.id)
     else:
         form = ProductForm()
         size_formset = ProductSizeFormSet()
 
     context = {
-        'form': form,
-        'size_formset': size_formset,
+        "form": form,
+        "size_formset": size_formset,
     }
 
-    return render(request, 'products/add_product.html', context)
+    return render(request, "products/add_product.html", context)
 
 
 @login_required
@@ -170,25 +170,29 @@ def edit_product(request, product_id):
 
     if request.method == "POST":
         product_form = ProductForm(request.POST, instance=product)
-        size_formset = ProductSizeFormSet(request.POST, prefix='size', instance=product)
+        size_formset = ProductSizeFormSet(
+            request.POST,
+            prefix="size",
+            instance=product,
+        )
 
         if product_form.is_valid() and size_formset.is_valid():
             product = product_form.save()
             if product.has_sizes:
                 size_formset.save()
 
-            return redirect('product_detail', product_id=product.id)
+            return redirect("product_detail", product_id=product.id)
     else:
         product_form = ProductForm(instance=product)
-        size_formset = ProductSizeFormSet(prefix='size', instance=product)
+        size_formset = ProductSizeFormSet(prefix="size", instance=product)
 
     context = {
-        'product': product,
-        'product_form': product_form,
-        'size_formset': size_formset,
+        "product": product,
+        "product_form": product_form,
+        "size_formset": size_formset,
     }
 
-    return render(request, 'products/edit_product.html', context)
+    return render(request, "products/edit_product.html", context)
 
 
 @login_required

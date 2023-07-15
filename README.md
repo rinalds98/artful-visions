@@ -4,7 +4,7 @@ Artful Visions
 Introduction
 =
 
-Artful Visions is a Photography E-Commerce website with a fully functioning payment system. Users accsesing this website will be able to add a prouct to cart, Add a discount code and purchase products. Users can leave reviews on products and add a testimonial that the admin can accept to be placed on the home page.
+Artful Visions is a Photography E-Commerce website with a fully functioning payment system. Users accsesing this website will be able to add a product to cart, Add a discount code and purchase products. Users can leave reviews on products and add a testimonial that the admin can accept to be placed on the home page.
 
 The website can be viewed here: [Artful Visions](https://artful-visions-e583fd12b6db.herokuapp.com/ "Artful Visions").
 
@@ -208,8 +208,6 @@ The way to fix this would be to use javascript for the star rating system rather
 - **Python Validation**
     - PEP8online.com was down during testing so I installed pycodestyle in VSCode. Then I searched for Linter and selected 'pycodestyle'. This showed if I had any errors which as of deployment is error-free.
 
-    ![Linter Check](/static/images/temperror.png)
-
     - All code that was written by me in the following apps - (bag, checkout, discounts, home, products, profiles) is pep8 complaint. which are:
         - admin.py
         - forms.py
@@ -217,6 +215,8 @@ The way to fix this would be to use javascript for the star rating system rather
         - urls.py
         - views.py
     - While checking if everything was pep8 compliant I noticed the Django-provided code inside of the settings.py file was not.
+    - There was only 1 line in the project written by me that was too long according to the linter check.
+    ![Error Code](/media/errorpython.png)
 
 - **HTML Validator**
     - I ran my website through  [HTML Validator](https://validator.w3.org/ "HTML Validator") and received no errors.
@@ -311,6 +311,7 @@ The Following was tested manually and passed:
 - **Stripe**
     - When checking payment logs on stripe - correct amount and payment confirmed
     - Webhooks correctly installed - webhook log status 200 for all instances.
+    ![Stripe Test](/media/stripetest.png)
 
 - **Checkout Success**
     - When payment has been completed, an order summary is shown with all the correct information and prices.
@@ -330,7 +331,6 @@ The Following was tested manually and passed:
         - If size and price gets added to the product sizes section they will be displayed.
         - If you add 2 of the same sizes. Both will be displayed but only the first price will be displayed no matter which of the duplicate sizes is selected.
         - individual sizes can be deleted.
-        - (Bug/ Inconvience Found) When a user wants to add multiple sizes to a product they are only allowed to add 1 size at a time. Save the product and then select 'edit' to add another size.
 
 - **Discount Codes**
     - Discount codes are added via the admin panel.
