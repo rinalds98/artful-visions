@@ -22,7 +22,7 @@ body {
 }
 @media screen and (min-width: 960px) {
     .desktop-menu {
-        display: none w!important;
+        display: none !important;
     }
 }
 
